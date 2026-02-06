@@ -34,14 +34,14 @@ export const PAGE_SEO = {
       "Submit your commercial real estate deal for a free financing analysis. Typical response within one business day. Confidential. No obligation.",
   },
   tools: {
-    title: "CRE Loan Calculators | Payment, DSCR & Max Loan Amount",
+    title: "CRE Finance Tools | 14 Calculators with Live Market Rates",
     description:
-      "Free commercial real estate loan calculators: estimate monthly payments, calculate DSCR ratios, and determine maximum loan amounts for your next investment.",
+      "Free commercial real estate finance tools: 14 calculators with live Federal Reserve rates, interactive charts, and PDF export. DSCR, cap rate, IRR, LTV, debt yield, waterfall & more.",
   },
   mortgageCalculator: {
     title:
-      "CRE Mortgage Calculator Suite | Cap Rate, DSCR, IRR, Waterfall & More",
+      "14 Free CRE Calculators | Live Rates, Charts, PDF Export | Sage Creek Group",
     description:
-      "Free commercial real estate calculators: cap rate, DSCR, blended rate, cash-on-cash return, IRR, equity waterfall, partner splits, max loan, and property valuation.",
+      "The most comprehensive free CRE calculator suite online. 14 tools with live Federal Reserve market rates: DSCR, cap rate, IRR, debt yield, LTV, equity waterfall, construction interest reserve, refinance savings & more. Interactive charts and branded PDF export.",
   },
 } as const;

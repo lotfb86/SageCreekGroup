@@ -1,5 +1,7 @@
 "use client";
 
+import Tooltip from "@/components/calculators/Tooltip";
+
 interface NumberInputProps {
   label: string;
   value: number;
@@ -8,6 +10,8 @@ interface NumberInputProps {
   suffix?: string;
   step?: number;
   min?: number;
+  tooltip?: string;
+  marketHint?: string;
 }
 
 export default function NumberInput({
@@ -18,12 +22,19 @@ export default function NumberInput({
   suffix,
   step,
   min,
+  tooltip,
+  marketHint,
 }: NumberInputProps) {
   return (
     <div>
-      <label className="block text-xs uppercase tracking-[2px] text-warmgray-heading font-medium mb-2">
-        {label}
-      </label>
+      {label && (
+        <div className="flex items-center gap-1.5 mb-2">
+          <label className="text-xs uppercase tracking-[2px] text-warmgray-heading font-medium">
+            {label}
+          </label>
+          {tooltip && <Tooltip content={tooltip} />}
+        </div>
+      )}
       <div className="relative">
         {prefix && (
           <span className="absolute left-3 top-1/2 -translate-y-1/2 text-warmgray text-sm">
@@ -44,6 +55,9 @@ export default function NumberInput({
           </span>
         )}
       </div>
+      {marketHint && (
+        <p className="text-[11px] text-sage-400/70 mt-1">{marketHint}</p>
+      )}
     </div>
   );
 }

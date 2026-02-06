@@ -264,3 +264,110 @@ export function calculateBalloonBalance(
 
   return Math.max(0, balance);
 }
+
+// ===== Phase 4: New Calculators =====
+
+// Debt Yield — NOI / Loan Amount
+export function calculateDebtYield(noi: number, loanAmount: number): number {
+  if (loanAmount === 0) return 0;
+  return noi / loanAmount;
+}
+
+// Loan-to-Value
+export function calculateLTV(loanAmount: number, propertyValue: number): number {
+  if (propertyValue === 0) return 0;
+  return loanAmount / propertyValue;
+}
+
+// Construction Loan Interest Reserve
+export interface ConstructionDrawMonth {
+  month: number;
+  cumulativeDrawn: number;
+  interestPayment: number;
+}
+
+export interface ConstructionInterestReserveResult {
+  totalReserve: number;
+  monthlyBreakdown: ConstructionDrawMonth[];
+  avgOutstandingBalance: number;
+}
+
+export function calculateConstructionInterestReserve(
+  totalBudget: number,
+  drawPeriodMonths: number,
+  leaseUpMonths: number,
+  annualRate: number
+): ConstructionInterestReserveResult {
+  const monthlyRate = annualRate / 100 / 12;
+  const totalMonths = drawPeriodMonths + leaseUpMonths;
+  const monthlyDraw = drawPeriodMonths > 0 ? totalBudget / drawPeriodMonths : 0;
+  const breakdown: ConstructionDrawMonth[] = [];
+  let totalReserve = 0;
+  let cumulativeDrawn = 0;
+  let balanceSum = 0;
+
+  for (let m = 1; m <= totalMonths; m++) {
+    // During draw period, funds are disbursed monthly
+    if (m <= drawPeriodMonths) {
+      cumulativeDrawn += monthlyDraw;
+    }
+    // Interest accrues on the cumulative balance
+    const interestPayment = cumulativeDrawn * monthlyRate;
+    totalReserve += interestPayment;
+    balanceSum += cumulativeDrawn;
+
+    breakdown.push({
+      month: m,
+      cumulativeDrawn,
+      interestPayment,
+    });
+  }
+
+  return {
+    totalReserve,
+    monthlyBreakdown: breakdown,
+    avgOutstandingBalance: totalMonths > 0 ? balanceSum / totalMonths : 0,
+  };
+}
+
+// Refinance Savings
+export interface RefinanceSavingsResult {
+  currentMonthly: number;
+  newMonthly: number;
+  monthlySavings: number;
+  annualSavings: number;
+  lifetimeSavings: number;
+  breakEvenMonths: number;
+}
+
+export function calculateRefinanceSavings(
+  currentBalance: number,
+  currentRate: number,
+  currentRemainingYears: number,
+  newAmount: number,
+  newRate: number,
+  newAmortYears: number,
+  closingCosts: number
+): RefinanceSavingsResult {
+  const currentMonthly = calculateMonthlyPayment(
+    currentBalance,
+    currentRate,
+    currentRemainingYears
+  );
+  const newMonthly = calculateMonthlyPayment(newAmount, newRate, newAmortYears);
+  const monthlySavings = currentMonthly - newMonthly;
+  const annualSavings = monthlySavings * 12;
+  const lifetimeSavings =
+    monthlySavings * newAmortYears * 12 - closingCosts;
+  const breakEvenMonths =
+    monthlySavings > 0 ? Math.ceil(closingCosts / monthlySavings) : 0;
+
+  return {
+    currentMonthly,
+    newMonthly,
+    monthlySavings,
+    annualSavings,
+    lifetimeSavings,
+    breakEvenMonths,
+  };
+}
