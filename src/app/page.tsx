@@ -31,16 +31,18 @@ export default function HomePage() {
             <em className="italic">Solutions.</em>
           </h2>
           <p className="mt-6 text-warmgray leading-relaxed text-lg">
-            Sage Creek Group acts as your advocate in the capital markets,
-            leveraging decades of lending relationships to source the best
-            available debt for your project — whether it&rsquo;s a $3&nbsp;million
-            townhome community or a $40&nbsp;million mixed-use development.
+            You have a deal to close and a timeline to hit. You shouldn&rsquo;t
+            have to cold-call twenty lenders to find out who will actually
+            compete for your business. We take your $3M townhome community or
+            your $40M mixed-use development to the full capital markets — so
+            you see every option, lenders compete for your deal, and you close
+            on the best available terms.
           </p>
           <Link
             href="/why-sage-creek"
             className="mt-8 inline-flex items-center gap-2 text-navy-500 font-medium text-sm uppercase tracking-[2px] hover:text-sage-400 transition-colors"
           >
-            Learn Why Sage Creek <ArrowRight size={16} />
+            See How It Works <ArrowRight size={16} />
           </Link>
         </div>
       </section>
@@ -71,10 +73,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4">
-              What We Do
+              Financing Solutions
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading">
-              Debt Placement Services
+              Built Around How You Actually Do Deals
             </h2>
           </div>
 
@@ -83,22 +85,22 @@ export default function HomePage() {
               {
                 icon: Landmark,
                 title: "Permanent Financing",
-                desc: "Long-term fixed and variable rate loans from life companies, agencies, banks, and CMBS lenders.",
+                desc: "Your asset is stabilized and performing. Now you need long-term debt that locks in your returns — the right rate, the right term, the right structure. We source from life companies, banks, CMBS, and agency lenders so you see the full picture before you commit.",
               },
               {
                 icon: BrickWall,
                 title: "Construction Loans",
-                desc: "Ground-up construction financing for multifamily, mixed-use, and commercial developments.",
+                desc: "Ground-up projects live and die on how the debt is structured. We help you secure construction financing with the draw schedule, interest reserve, and completion terms your project actually needs — whether it's a 20-unit townhome site or a 200-unit apartment community.",
               },
               {
                 icon: Building2,
-                title: "Bridge & Mezzanine",
-                desc: "Short-term bridge loans, mezzanine debt, and preferred equity for transitional assets.",
+                title: "Bridge Lending",
+                desc: "Acquiring a value-add property? In lease-up? Need to close fast while you line up permanent debt? Bridge financing gets you from here to there. We find the short-term capital that fits your business plan and your exit timeline.",
               },
               {
                 icon: Shield,
                 title: "Agency Lending",
-                desc: "Fannie Mae, Freddie Mac, and HUD/FHA programs for qualifying multifamily properties.",
+                desc: "If you own or are acquiring multifamily, agency debt from Fannie Mae, Freddie Mac, or HUD can deliver the most competitive long-term rates in the market. We know the programs, the process, and which execution fits your property today.",
               },
             ].map((service) => (
               <div
@@ -224,11 +226,11 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-navy-800/80" />
         <div className="relative z-10 mx-auto max-w-3xl text-center">
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white leading-tight">
-            Ready to discuss your next project?
+            You have a deal. Let&rsquo;s find the right debt.
           </h2>
           <p className="mt-4 text-white/70 text-lg">
-            Let our team source the best available financing for your commercial
-            real estate investment.
+            Tell us about your property and timeline. We&rsquo;ll come back
+            with options, not a pitch.
           </p>
           <Link
             href="/contact"
