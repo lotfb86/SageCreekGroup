@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colors */
+  --color-navy-50: #f0f3f7;
+  --color-navy-100: #d9e0eb;
+  --color-navy-200: #b3c1d6;
+  --color-navy-300: #8da2c2;
+  --color-navy-400: #6783ad;
+  --color-navy-500: #3d5a80;
+  --color-navy-600: #2d4466;
+  --color-navy-700: #1e2f4d;
+  --color-navy-800: #141f33;
+  --color-navy-900: #0a101a;
+
+  --color-sage-50: #f0f7f5;
+  --color-sage-100: #d1ebe4;
+  --color-sage-200: #a3d7c9;
+  --color-sage-300: #75c3ae;
+  --color-sage-400: #4a9b8e;
+  --color-sage-500: #3d8577;
+  --color-sage-600: #2d6359;
+  --color-sage-700: #1e423b;
+  --color-sage-800: #0f211e;
+
+  --color-charcoal: #1f1f1f;
+  --color-charcoal-light: #2a2a2a;
+  --color-charcoal-dark: #141414;
+  --color-cream: #f8f7f4;
+  --color-warmgray: rgba(16, 15, 15, 0.77);
+  --color-warmgray-heading: rgba(26, 26, 26, 0.9);
+
+  /* Fonts */
+  --font-serif: var(--font-eb-garamond), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-warmgray);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    color: var(--color-warmgray-heading);
+  }
+
+  ::selection {
+    background-color: var(--color-sage-200);
+    color: var(--color-navy-900);
+  }
 }

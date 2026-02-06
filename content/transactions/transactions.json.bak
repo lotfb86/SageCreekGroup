@@ -1,0 +1,757 @@
+[
+  {
+    "id": 1,
+    "slug": "20-unit-townhomes-caldwell-id",
+    "amount": 3375000,
+    "amountDisplay": "$3,375,000",
+    "title": "20 Unit Townhomes",
+    "subtitle": "Caldwell, ID",
+    "dealType": "permanent",
+    "propertyType": "multifamily",
+    "city": "Caldwell",
+    "state": "ID",
+    "terms": {
+      "Rate": "5.31%",
+      "Amortization": "30 Years",
+      "Term": "30 Years",
+      "LTV": "75%"
+    },
+    "description": "Permanent financing for a 20-unit townhome community in Caldwell, Idaho.",
+    "image": "/images/transactions/townhomes-caldwell.png",
+    "featured": true,
+    "sortOrder": 1
+  },
+  {
+    "id": 2,
+    "slug": "class-a-multi-oregon-portland-or",
+    "amount": 10000000,
+    "amountDisplay": "$10,000,000",
+    "title": "Class A Multi Oregon",
+    "subtitle": "Portland, OR",
+    "dealType": "permanent",
+    "propertyType": "multifamily",
+    "city": "Portland",
+    "state": "OR",
+    "terms": {
+      "Rate": "4.15%",
+      "Amortization": "30 Years",
+      "Term": "10 Years",
+      "LTV": "70%"
+    },
+    "description": "Permanent financing for a Class A multifamily property in Portland, Oregon.",
+    "image": "/images/transactions/class-a-multi-oregon.png",
+    "featured": true,
+    "sortOrder": 2
+  },
+  {
+    "id": 3,
+    "slug": "multi-family-community-washington",
+    "amount": 16250000,
+    "amountDisplay": "$16,250,000",
+    "title": "Multi-Family Community",
+    "subtitle": "Washington",
+    "dealType": "bridge",
+    "propertyType": "multifamily",
+    "city": "Washington",
+    "state": "WA",
+    "terms": {
+      "Rate": "Variable",
+      "Term": "3+1+1 Bridge",
+      "Permanent Rate": "TBD at conversion",
+      "LTV": "75%"
+    },
+    "description": "Bridge-to-permanent financing for a multifamily community in Washington state.",
+    "image": "/images/transactions/bridge-perm-washington.png",
+    "featured": true,
+    "sortOrder": 3
+  },
+  {
+    "id": 4,
+    "slug": "redmond-industrial-redmond-or",
+    "amount": 6350000,
+    "amountDisplay": "$6,350,000",
+    "title": "Redmond Industrial",
+    "subtitle": "Redmond, OR",
+    "dealType": "permanent",
+    "propertyType": "industrial",
+    "city": "Redmond",
+    "state": "OR",
+    "terms": {
+      "Rate": "5.75%",
+      "Amortization": "25 Years",
+      "Term": "10 Years",
+      "LTV": "65%"
+    },
+    "description": "Permanent financing for an industrial property in Redmond, Oregon.",
+    "image": "/images/transactions/redmond-industrial.png",
+    "sortOrder": 4
+  },
+  {
+    "id": 5,
+    "slug": "mixed-use-development-kansas-city-mo",
+    "amount": 2200000,
+    "amountDisplay": "$2,200,000",
+    "title": "Mixed Use Development",
+    "subtitle": "Kansas City, MO",
+    "dealType": "construction",
+    "propertyType": "mixed-use",
+    "city": "Kansas City",
+    "state": "MO",
+    "terms": {
+      "Rate": "6.25%",
+      "Term": "18 Months",
+      "Loan Type": "Construction",
+      "LTV": "70%"
+    },
+    "description": "Construction financing for a mixed-use development in Kansas City, Missouri.",
+    "image": "/images/transactions/mixed-use-kansas-city.png",
+    "sortOrder": 5
+  },
+  {
+    "id": 6,
+    "slug": "breckenridge-apartments-or",
+    "amount": 11500000,
+    "amountDisplay": "$11,500,000",
+    "title": "Breckenridge Apartments",
+    "subtitle": "OR",
+    "dealType": "permanent",
+    "propertyType": "multifamily",
+    "city": "Oregon",
+    "state": "OR",
+    "terms": {
+      "Rate": "4.85%",
+      "Amortization": "30 Years",
+      "Term": "10 Years",
+      "LTV": "72%"
+    },
+    "description": "Permanent financing for Breckenridge Apartments in Oregon.",
+    "image": "/images/transactions/breckenridge-apartments.png",
+    "sortOrder": 6
+  },
+  {
+    "id": 7,
+    "slug": "mixed-use-property-salem-or",
+    "amount": 5750000,
+    "amountDisplay": "$5,750,000",
+    "title": "Mixed-Use Property",
+    "subtitle": "Salem, OR",
+    "dealType": "permanent",
+    "propertyType": "mixed-use",
+    "city": "Salem",
+    "state": "OR",
+    "terms": {
+      "Rate": "5.10%",
+      "Amortization": "25 Years",
+      "Term": "10 Years",
+      "LTV": "68%"
+    },
+    "description": "Permanent financing for a mixed-use retail and residential property in Salem, Oregon.",
+    "image": "/images/transactions/mixed-use-salem.png",
+    "sortOrder": 7
+  },
+  {
+    "id": 8,
+    "slug": "boones-crossing-boise-id",
+    "amount": 8900000,
+    "amountDisplay": "$8,900,000",
+    "title": "Boone's Crossing",
+    "subtitle": "Boise, ID",
+    "dealType": "construction",
+    "propertyType": "multifamily",
+    "city": "Boise",
+    "state": "ID",
+    "terms": {
+      "Rate": "5.50%",
+      "Term": "24 Months",
+      "Loan Type": "Construction",
+      "LTV": "65%"
+    },
+    "description": "Construction financing for the Boone's Crossing multifamily development in Boise, Idaho.",
+    "image": "/images/transactions/boones-crossing.png",
+    "sortOrder": 8
+  },
+  {
+    "id": 9,
+    "slug": "timberline-hills-apartments-bend-or",
+    "amount": 7200000,
+    "amountDisplay": "$7,200,000",
+    "title": "Timberline Hills Apartments",
+    "subtitle": "Bend, OR",
+    "dealType": "permanent",
+    "propertyType": "multifamily",
+    "city": "Bend",
+    "state": "OR",
+    "terms": {
+      "Rate": "4.75%",
+      "Amortization": "30 Years",
+      "Term": "10 Years",
+      "LTV": "70%"
+    },
+    "description": "Permanent financing for Timberline Hills Apartments in Bend, Oregon.",
+    "image": "/images/transactions/timberline-hills.png",
+    "sortOrder": 9
+  },
+  {
+    "id": 10,
+    "slug": "young-street-townhomes-meridian-id",
+    "amount": 4500000,
+    "amountDisplay": "$4,500,000",
+    "title": "Young Street Townhomes",
+    "subtitle": "Meridian, ID",
+    "dealType": "construction",
+    "propertyType": "multifamily",
+    "city": "Meridian",
+    "state": "ID",
+    "terms": {
+      "Rate": "5.75%",
+      "Term": "18 Months",
+      "Loan Type": "Construction",
+      "LTV": "65%"
+    },
+    "description": "Construction financing for the Young Street Townhomes project in Meridian, Idaho.",
+    "image": "/images/transactions/young-street-townhomes.png",
+    "sortOrder": 10
+  },
+  {
+    "id": 11,
+    "slug": "bethel-park-apartments-eugene-or",
+    "amount": 12000000,
+    "amountDisplay": "$12,000,000",
+    "title": "Bethel Park Apartments",
+    "subtitle": "Eugene, OR",
+    "dealType": "permanent",
+    "propertyType": "multifamily",
+    "city": "Eugene",
+    "state": "OR",
+    "terms": {
+      "Rate": "4.50%",
+      "Amortization": "30 Years",
+      "Term": "10 Years",
+      "LTV": "72%"
+    },
+    "description": "Permanent financing for Bethel Park Apartments in Eugene, Oregon.",
+    "image": "/images/transactions/bethel-park.png",
+    "sortOrder": 11
+  },
+  {
+    "id": 12,
+    "slug": "samish-station-mixed-use-bellingham-wa",
+    "amount": 3800000,
+    "amountDisplay": "$3,800,000",
+    "title": "Samish Station Mixed Use",
+    "subtitle": "Bellingham, WA",
+    "dealType": "bridge",
+    "propertyType": "mixed-use",
+    "city": "Bellingham",
+    "state": "WA",
+    "terms": {
+      "Rate": "7.25%",
+      "Term": "2+1 Years",
+      "Loan Type": "Bridge",
+      "LTV": "70%"
+    },
+    "description": "Bridge financing for the Samish Station mixed-use property in Bellingham, Washington.",
+    "image": "/images/transactions/samish-station.jpg",
+    "sortOrder": 12
+  },
+  {
+    "id": 13,
+    "slug": "senior-living-community-boise-id",
+    "amount": 15000000,
+    "amountDisplay": "$15,000,000",
+    "title": "Senior Living Community",
+    "subtitle": "Boise, ID",
+    "dealType": "construction",
+    "propertyType": "senior-housing",
+    "city": "Boise",
+    "state": "ID",
+    "terms": {
+      "Rate": "5.50%",
+      "Term": "24 Months",
+      "Loan Type": "Construction",
+      "LTV": "60%"
+    },
+    "description": "Construction financing for a senior living community development in Boise, Idaho.",
+    "sortOrder": 13
+  },
+  {
+    "id": 14,
+    "slug": "garden-style-apartments-medford-or",
+    "amount": 9500000,
+    "amountDisplay": "$9,500,000",
+    "title": "Garden-Style Apartments",
+    "subtitle": "Medford, OR",
+    "dealType": "permanent",
+    "propertyType": "multifamily",
+    "city": "Medford",
+    "state": "OR",
+    "terms": {
+      "Rate": "4.95%",
+      "Amortization": "30 Years",
+      "Term": "10 Years",
+      "LTV": "70%"
+    },
+    "description": "Permanent financing for a garden-style apartment community in Medford, Oregon.",
+    "sortOrder": 14
+  },
+  {
+    "id": 15,
+    "slug": "office-complex-spokane-wa",
+    "amount": 6800000,
+    "amountDisplay": "$6,800,000",
+    "title": "Office Complex",
+    "subtitle": "Spokane, WA",
+    "dealType": "refinance",
+    "propertyType": "office",
+    "city": "Spokane",
+    "state": "WA",
+    "terms": {
+      "Rate": "5.25%",
+      "Amortization": "25 Years",
+      "Term": "7 Years",
+      "LTV": "65%"
+    },
+    "description": "Refinance of an office complex in Spokane, Washington.",
+    "sortOrder": 15
+  },
+  {
+    "id": 16,
+    "slug": "retail-center-twin-falls-id",
+    "amount": 2850000,
+    "amountDisplay": "$2,850,000",
+    "title": "Retail Center",
+    "subtitle": "Twin Falls, ID",
+    "dealType": "acquisition",
+    "propertyType": "retail",
+    "city": "Twin Falls",
+    "state": "ID",
+    "terms": {
+      "Rate": "5.50%",
+      "Amortization": "25 Years",
+      "Term": "10 Years",
+      "LTV": "70%"
+    },
+    "description": "Acquisition financing for a retail center in Twin Falls, Idaho.",
+    "sortOrder": 16
+  },
+  {
+    "id": 17,
+    "slug": "luxury-apartments-portland-or",
+    "amount": 18500000,
+    "amountDisplay": "$18,500,000",
+    "title": "Luxury Apartments",
+    "subtitle": "Portland, OR",
+    "dealType": "construction",
+    "propertyType": "multifamily",
+    "city": "Portland",
+    "state": "OR",
+    "terms": {
+      "Rate": "5.25%",
+      "Term": "30 Months",
+      "Loan Type": "Construction",
+      "LTV": "65%"
+    },
+    "description": "Construction financing for a luxury apartment community in Portland, Oregon.",
+    "sortOrder": 17
+  },
+  {
+    "id": 18,
+    "slug": "medical-office-building-coeur-dalene-id",
+    "amount": 4200000,
+    "amountDisplay": "$4,200,000",
+    "title": "Medical Office Building",
+    "subtitle": "Coeur d'Alene, ID",
+    "dealType": "permanent",
+    "propertyType": "medical-office",
+    "city": "Coeur d'Alene",
+    "state": "ID",
+    "terms": {
+      "Rate": "5.00%",
+      "Amortization": "25 Years",
+      "Term": "10 Years",
+      "LTV": "70%"
+    },
+    "description": "Permanent financing for a medical office building in Coeur d'Alene, Idaho.",
+    "sortOrder": 18
+  },
+  {
+    "id": 19,
+    "slug": "hotel-property-bend-or",
+    "amount": 7500000,
+    "amountDisplay": "$7,500,000",
+    "title": "Hotel Property",
+    "subtitle": "Bend, OR",
+    "dealType": "bridge",
+    "propertyType": "hotel",
+    "city": "Bend",
+    "state": "OR",
+    "terms": {
+      "Rate": "7.50%",
+      "Term": "2+1 Years",
+      "Loan Type": "Bridge",
+      "LTV": "65%"
+    },
+    "description": "Bridge financing for a hotel property in Bend, Oregon.",
+    "sortOrder": 19
+  },
+  {
+    "id": 20,
+    "slug": "industrial-warehouse-nampa-id",
+    "amount": 5100000,
+    "amountDisplay": "$5,100,000",
+    "title": "Industrial Warehouse",
+    "subtitle": "Nampa, ID",
+    "dealType": "permanent",
+    "propertyType": "industrial",
+    "city": "Nampa",
+    "state": "ID",
+    "terms": {
+      "Rate": "5.35%",
+      "Amortization": "25 Years",
+      "Term": "10 Years",
+      "LTV": "65%"
+    },
+    "description": "Permanent financing for an industrial warehouse in Nampa, Idaho.",
+    "sortOrder": 20
+  },
+  {
+    "id": 21,
+    "slug": "student-housing-corvallis-or",
+    "amount": 13750000,
+    "amountDisplay": "$13,750,000",
+    "title": "Student Housing",
+    "subtitle": "Corvallis, OR",
+    "dealType": "construction",
+    "propertyType": "student-housing",
+    "city": "Corvallis",
+    "state": "OR",
+    "terms": {
+      "Rate": "5.75%",
+      "Term": "24 Months",
+      "Loan Type": "Construction",
+      "LTV": "60%"
+    },
+    "description": "Construction financing for a student housing development near Oregon State University.",
+    "sortOrder": 21
+  },
+  {
+    "id": 22,
+    "slug": "single-family-portfolio-boise-id",
+    "amount": 3200000,
+    "amountDisplay": "$3,200,000",
+    "title": "Single Family Portfolio",
+    "subtitle": "Boise, ID",
+    "dealType": "acquisition",
+    "propertyType": "single-family",
+    "city": "Boise",
+    "state": "ID",
+    "terms": {
+      "Rate": "5.85%",
+      "Amortization": "30 Years",
+      "Term": "5 Years",
+      "LTV": "75%"
+    },
+    "description": "Acquisition financing for a single-family rental portfolio in the Boise metro area.",
+    "sortOrder": 22
+  },
+  {
+    "id": 23,
+    "slug": "suburban-office-park-salem-or",
+    "amount": 8400000,
+    "amountDisplay": "$8,400,000",
+    "title": "Suburban Office Park",
+    "subtitle": "Salem, OR",
+    "dealType": "permanent",
+    "propertyType": "office",
+    "city": "Salem",
+    "state": "OR",
+    "terms": {
+      "Rate": "5.15%",
+      "Amortization": "25 Years",
+      "Term": "10 Years",
+      "LTV": "65%"
+    },
+    "description": "Permanent financing for a suburban office park in Salem, Oregon.",
+    "sortOrder": 23
+  },
+  {
+    "id": 24,
+    "slug": "multifamily-portfolio-portland-or",
+    "amount": 11200000,
+    "amountDisplay": "$11,200,000",
+    "title": "Multifamily Portfolio",
+    "subtitle": "Portland, OR",
+    "dealType": "refinance",
+    "propertyType": "multifamily",
+    "city": "Portland",
+    "state": "OR",
+    "terms": {
+      "Rate": "4.65%",
+      "Amortization": "30 Years",
+      "Term": "10 Years",
+      "LTV": "72%"
+    },
+    "description": "Refinance of a multifamily portfolio in the Portland metro area.",
+    "sortOrder": 24
+  },
+  {
+    "id": 25,
+    "slug": "retail-development-meridian-id",
+    "amount": 6500000,
+    "amountDisplay": "$6,500,000",
+    "title": "Retail Development",
+    "subtitle": "Meridian, ID",
+    "dealType": "mini-perm",
+    "propertyType": "retail",
+    "city": "Meridian",
+    "state": "ID",
+    "terms": {
+      "Rate": "5.50%",
+      "Amortization": "30 Years",
+      "Term": "3 Years",
+      "LTV": "70%"
+    },
+    "description": "Mini-perm financing for a new retail development in Meridian, Idaho.",
+    "sortOrder": 25
+  },
+  {
+    "id": 26,
+    "slug": "mixed-use-tower-seattle-wa",
+    "amount": 20000000,
+    "amountDisplay": "$20,000,000",
+    "title": "Mixed-Use Tower",
+    "subtitle": "Seattle, WA",
+    "dealType": "construction",
+    "propertyType": "mixed-use",
+    "city": "Seattle",
+    "state": "WA",
+    "terms": {
+      "Rate": "5.00%",
+      "Term": "36 Months",
+      "Loan Type": "Construction",
+      "LTV": "60%"
+    },
+    "description": "Construction financing for a mixed-use tower development in Seattle, Washington.",
+    "sortOrder": 26
+  },
+  {
+    "id": 27,
+    "slug": "land-development-eagle-id",
+    "amount": 4750000,
+    "amountDisplay": "$4,750,000",
+    "title": "Land Development",
+    "subtitle": "Eagle, ID",
+    "dealType": "permanent",
+    "propertyType": "land",
+    "city": "Eagle",
+    "state": "ID",
+    "terms": {
+      "Rate": "6.00%",
+      "Term": "5 Years",
+      "Loan Type": "Land",
+      "LTV": "50%"
+    },
+    "description": "Land development financing for a residential subdivision in Eagle, Idaho.",
+    "sortOrder": 27
+  },
+  {
+    "id": 28,
+    "slug": "senior-care-facility-eugene-or",
+    "amount": 9000000,
+    "amountDisplay": "$9,000,000",
+    "title": "Senior Care Facility",
+    "subtitle": "Eugene, OR",
+    "dealType": "permanent",
+    "propertyType": "senior-housing",
+    "city": "Eugene",
+    "state": "OR",
+    "terms": {
+      "Rate": "4.85%",
+      "Amortization": "25 Years",
+      "Term": "10 Years",
+      "LTV": "70%"
+    },
+    "description": "Permanent financing for a senior care facility in Eugene, Oregon.",
+    "sortOrder": 28
+  },
+  {
+    "id": 29,
+    "slug": "multifamily-renovation-tacoma-wa",
+    "amount": 3600000,
+    "amountDisplay": "$3,600,000",
+    "title": "Multifamily Renovation",
+    "subtitle": "Tacoma, WA",
+    "dealType": "bridge",
+    "propertyType": "multifamily",
+    "city": "Tacoma",
+    "state": "WA",
+    "terms": {
+      "Rate": "7.00%",
+      "Term": "2 Years",
+      "Loan Type": "Bridge",
+      "LTV": "75%"
+    },
+    "description": "Bridge financing for the renovation of a multifamily property in Tacoma, Washington.",
+    "sortOrder": 29
+  },
+  {
+    "id": 30,
+    "slug": "apartment-community-boise-id",
+    "amount": 14500000,
+    "amountDisplay": "$14,500,000",
+    "title": "Apartment Community",
+    "subtitle": "Boise, ID",
+    "dealType": "construction",
+    "propertyType": "multifamily",
+    "city": "Boise",
+    "state": "ID",
+    "terms": {
+      "Rate": "5.25%",
+      "Term": "24 Months",
+      "Loan Type": "Construction",
+      "LTV": "65%"
+    },
+    "description": "Construction financing for a 120-unit apartment community in Boise, Idaho.",
+    "sortOrder": 30
+  },
+  {
+    "id": 31,
+    "slug": "retail-strip-center-kennewick-wa",
+    "amount": 5500000,
+    "amountDisplay": "$5,500,000",
+    "title": "Retail Strip Center",
+    "subtitle": "Kennewick, WA",
+    "dealType": "permanent",
+    "propertyType": "retail",
+    "city": "Kennewick",
+    "state": "WA",
+    "terms": {
+      "Rate": "5.40%",
+      "Amortization": "25 Years",
+      "Term": "10 Years",
+      "LTV": "68%"
+    },
+    "description": "Permanent financing for a retail strip center in Kennewick, Washington.",
+    "sortOrder": 31
+  },
+  {
+    "id": 32,
+    "slug": "hotel-boise-id",
+    "amount": 7800000,
+    "amountDisplay": "$7,800,000",
+    "title": "Hotel",
+    "subtitle": "Boise, ID",
+    "dealType": "refinance",
+    "propertyType": "hotel",
+    "city": "Boise",
+    "state": "ID",
+    "terms": {
+      "Rate": "5.50%",
+      "Amortization": "25 Years",
+      "Term": "10 Years",
+      "LTV": "65%"
+    },
+    "description": "Refinance of a hotel property in the Boise, Idaho market.",
+    "sortOrder": 32
+  },
+  {
+    "id": 33,
+    "slug": "development-company-credit-line-portland-or",
+    "amount": 2500000,
+    "amountDisplay": "$2,500,000",
+    "title": "Development Company",
+    "subtitle": "Portland, OR",
+    "dealType": "credit-line",
+    "propertyType": "land",
+    "city": "Portland",
+    "state": "OR",
+    "terms": {
+      "Rate": "Variable",
+      "Term": "Revolving",
+      "Loan Type": "Credit Line",
+      "Max Draw": "$2.5M"
+    },
+    "description": "Revolving credit line for a real estate development company based in Portland, Oregon.",
+    "sortOrder": 33
+  },
+  {
+    "id": 34,
+    "slug": "class-a-apartments-beaverton-or",
+    "amount": 10500000,
+    "amountDisplay": "$10,500,000",
+    "title": "Class A Apartments",
+    "subtitle": "Beaverton, OR",
+    "dealType": "permanent",
+    "propertyType": "multifamily",
+    "city": "Beaverton",
+    "state": "OR",
+    "terms": {
+      "Rate": "4.45%",
+      "Amortization": "30 Years",
+      "Term": "12 Years",
+      "LTV": "72%"
+    },
+    "description": "Permanent financing for a Class A apartment community in Beaverton, Oregon.",
+    "sortOrder": 34
+  },
+  {
+    "id": 35,
+    "slug": "townhome-development-nampa-id",
+    "amount": 6200000,
+    "amountDisplay": "$6,200,000",
+    "title": "Townhome Development",
+    "subtitle": "Nampa, ID",
+    "dealType": "construction",
+    "propertyType": "multifamily",
+    "city": "Nampa",
+    "state": "ID",
+    "terms": {
+      "Rate": "5.75%",
+      "Term": "18 Months",
+      "Loan Type": "Construction",
+      "LTV": "65%"
+    },
+    "description": "Construction financing for a townhome development in Nampa, Idaho.",
+    "sortOrder": 35
+  },
+  {
+    "id": 36,
+    "slug": "industrial-portfolio-portland-or",
+    "amount": 8000000,
+    "amountDisplay": "$8,000,000",
+    "title": "Industrial Portfolio",
+    "subtitle": "Portland, OR",
+    "dealType": "acquisition",
+    "propertyType": "industrial",
+    "city": "Portland",
+    "state": "OR",
+    "terms": {
+      "Rate": "5.30%",
+      "Amortization": "25 Years",
+      "Term": "10 Years",
+      "LTV": "65%"
+    },
+    "description": "Acquisition financing for an industrial property portfolio in the Portland metro area.",
+    "sortOrder": 36
+  },
+  {
+    "id": 37,
+    "slug": "mixed-use-development-boise-id",
+    "amount": 40000000,
+    "amountDisplay": "$40,000,000",
+    "title": "Mixed-Use Development",
+    "subtitle": "Boise, ID",
+    "dealType": "construction",
+    "propertyType": "mixed-use",
+    "city": "Boise",
+    "state": "ID",
+    "terms": {
+      "Rate": "5.15%",
+      "Term": "36 Months",
+      "Loan Type": "Construction",
+      "LTV": "60%"
+    },
+    "description": "Construction financing for a large-scale mixed-use development in downtown Boise, Idaho.",
+    "sortOrder": 37
+  }
+]
