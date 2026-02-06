@@ -64,6 +64,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${BASE_URL}/tools/mortgage-calculator`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     ...teamUrls,
     ...transactionUrls,
   ];

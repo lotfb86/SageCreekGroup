@@ -9,52 +9,7 @@ import {
   calculateMaxLoanAmount,
 } from "@/lib/calculators";
 import { formatCurrency } from "@/lib/utils";
-
-function NumberInput({
-  label,
-  value,
-  onChange,
-  prefix,
-  suffix,
-  step,
-  min,
-}: {
-  label: string;
-  value: number;
-  onChange: (v: number) => void;
-  prefix?: string;
-  suffix?: string;
-  step?: number;
-  min?: number;
-}) {
-  return (
-    <div>
-      <label className="block text-xs uppercase tracking-[2px] text-warmgray-heading font-medium mb-2">
-        {label}
-      </label>
-      <div className="relative">
-        {prefix && (
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-warmgray text-sm">
-            {prefix}
-          </span>
-        )}
-        <input
-          type="number"
-          value={value}
-          onChange={(e) => onChange(Number(e.target.value))}
-          step={step || 1}
-          min={min ?? 0}
-          className={`w-full py-3 border border-warmgray/20 rounded-sm text-warmgray-heading focus:outline-none focus:border-sage-400 transition-colors bg-white ${prefix ? "pl-8 pr-4" : suffix ? "pl-4 pr-8" : "px-4"}`}
-        />
-        {suffix && (
-          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-warmgray text-sm">
-            {suffix}
-          </span>
-        )}
-      </div>
-    </div>
-  );
-}
+import NumberInput from "@/components/ui/NumberInput";
 
 function PaymentCalculator() {
   const [loanAmount, setLoanAmount] = useState(10000000);
@@ -171,6 +126,31 @@ export default function ToolsPage() {
       {/* Calculators */}
       <section className="bg-cream py-24 px-6">
         <div className="mx-auto max-w-6xl">
+          {/* Featured Tool Banner */}
+          <Link
+            href="/tools/mortgage-calculator"
+            className="block bg-white rounded-sm p-8 shadow-sm hover:shadow-md transition-shadow group mb-12"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-2">
+                  New Tool
+                </p>
+                <h2 className="font-serif text-2xl text-warmgray-heading mb-2">
+                  CRE Mortgage Calculator Suite
+                </h2>
+                <p className="text-warmgray text-sm">
+                  10 professional-grade calculators: Cap Rate, DSCR, IRR, Equity
+                  Waterfall, Blended Rate, Cash-on-Cash Return, and more.
+                </p>
+              </div>
+              <ArrowRight
+                size={24}
+                className="text-sage-400 group-hover:translate-x-1 transition-transform flex-shrink-0 ml-4"
+              />
+            </div>
+          </Link>
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <PaymentCalculator />
             <DSCRCalculator />

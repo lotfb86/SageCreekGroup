@@ -38,4 +38,10 @@ export const PAGE_SEO = {
     description:
       "Free commercial real estate loan calculators: estimate monthly payments, calculate DSCR ratios, and determine maximum loan amounts for your next investment.",
   },
+  mortgageCalculator: {
+    title:
+      "CRE Mortgage Calculator Suite | Cap Rate, DSCR, IRR, Waterfall & More",
+    description:
+      "Free commercial real estate calculators: cap rate, DSCR, blended rate, cash-on-cash return, IRR, equity waterfall, partner splits, max loan, and property valuation.",
+  },
 } as const;
