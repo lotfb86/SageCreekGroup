@@ -7,8 +7,8 @@ import {
   type MarketRatesResponse,
 } from "@/lib/market-rates";
 
-// ISR: revalidate every hour (3600s). At most 6 FRED calls per hour.
-export const revalidate = 3600;
+// Force dynamic execution so env vars are always available at runtime.
+export const dynamic = "force-dynamic";
 
 const FRED_BASE = "https://api.stlouisfed.org/fred/series/observations";
 
@@ -28,8 +28,11 @@ async function fetchFredSeries(
     url.searchParams.set("sort_order", "desc");
     url.searchParams.set("limit", "5"); // last 5 observations to skip holidays
 
-    const res = await fetch(url.toString(), { next: { revalidate: 3600 } });
-    if (!res.ok) return null;
+    const res = await fetch(url.toString(), { cache: "no-store" });
+    if (!res.ok) {
+      console.error(`FRED ${seriesId}: HTTP ${res.status}`);
+      return null;
+    }
 
     const data = await res.json();
     const observations = data.observations ?? [];
@@ -41,13 +44,14 @@ async function fetchFredSeries(
       }
     }
     return null;
-  } catch {
+  } catch (err) {
+    console.error(`FRED ${seriesId}:`, err);
     return null;
   }
 }
 
 export async function GET() {
-  const apiKey = process.env.FRED_API_KEY;
+  const apiKey = process.env.FRED_API_KEY?.trim();
 
   // No API key → return defaults immediately
   if (!apiKey) {
@@ -83,8 +87,15 @@ export async function GET() {
     isLive: anyLive,
   };
 
-  return NextResponse.json({
+  const response: MarketRatesResponse = {
     benchmarks,
     creRates: computeCreRates(benchmarks),
-  } satisfies MarketRatesResponse);
+  };
+
+  // Cache the response for 1 hour at the CDN edge
+  return NextResponse.json(response, {
+    headers: {
+      "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=600",
+    },
+  });
 }
