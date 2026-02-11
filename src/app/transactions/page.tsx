@@ -5,14 +5,11 @@ import { useSearchParams } from "next/navigation";
 import HeroSection from "@/components/sections/HeroSection";
 import TransactionCard from "@/components/transactions/TransactionCard";
 import TransactionFilters from "@/components/transactions/TransactionFilters";
-import { getAllTransactions, getTransactionStats, DEAL_SIZE_RANGES } from "@/lib/transactions";
-import { formatCurrency } from "@/lib/utils";
+import { getAllTransactions, DEAL_SIZE_RANGES } from "@/lib/transactions";
 
 function TransactionsContent() {
   const searchParams = useSearchParams();
   const allTransactions = getAllTransactions();
-  const stats = getTransactionStats();
-
   const [dealType, setDealType] = useState("all");
   const [propertyType, setPropertyType] = useState("all");
   const [dealSize, setDealSize] = useState("all");
@@ -56,44 +53,6 @@ function TransactionsContent() {
         title="Transactions"
         subtitle="A Proven Track Record"
       />
-
-      {/* Stats Bar */}
-      <section className="bg-navy-800 py-12 px-6">
-        <div className="mx-auto max-w-5xl grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
-          <div>
-            <p className="font-serif text-3xl md:text-4xl text-white">
-              {formatCurrency(stats.totalVolume)}
-            </p>
-            <p className="mt-1 text-white/60 text-xs uppercase tracking-[2px] font-sans">
-              Total Volume
-            </p>
-          </div>
-          <div>
-            <p className="font-serif text-3xl md:text-4xl text-white">
-              {stats.count}
-            </p>
-            <p className="mt-1 text-white/60 text-xs uppercase tracking-[2px] font-sans">
-              Transactions
-            </p>
-          </div>
-          <div>
-            <p className="font-serif text-3xl md:text-4xl text-white">
-              {stats.propertyTypeCount}+
-            </p>
-            <p className="mt-1 text-white/60 text-xs uppercase tracking-[2px] font-sans">
-              Property Types
-            </p>
-          </div>
-          <div>
-            <p className="font-serif text-3xl md:text-4xl text-white">
-              {stats.stateCount}
-            </p>
-            <p className="mt-1 text-white/60 text-xs uppercase tracking-[2px] font-sans">
-              States
-            </p>
-          </div>
-        </div>
-      </section>
 
       <section className="bg-white py-24 px-6">
         <div className="mx-auto max-w-6xl">

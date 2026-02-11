@@ -5,7 +5,6 @@ import {
   NAV_LINKS,
   COMPANY_TAGLINE,
   COMPANY_LOCATION,
-  LICENSING_INFO,
 } from "@/lib/constants";
 
 export default function Footer() {
@@ -22,7 +21,7 @@ export default function Footer() {
               {COMPANY_TAGLINE}
             </p>
             <p className="text-sm leading-relaxed mb-4">
-              Commercial Real Estate Financing | $3M&ndash;$40M+
+              Commercial Real Estate Financing | $3M+
             </p>
             <div className="flex items-center gap-2 text-sm text-white/50">
               <MapPin size={14} className="flex-shrink-0" />
@@ -102,7 +101,6 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Sage Creek Group LLC. All rights
             reserved.
           </p>
-          <p className="text-white/40">{LICENSING_INFO}</p>
         </div>
       </div>
     </footer>

@@ -12,7 +12,7 @@ export default function HomePage() {
       {/* Hero — The Tagline */}
       <HeroSection
         image="/images/heroes/services-hero.jpg"
-        title="We Know Who Will Finance Your Deal"
+        title="The Best Deal is the One That Closes"
         subtitle="Sage Creek Group LLC"
         height="full"
         ctaText="Submit Your Deal"
@@ -32,37 +32,18 @@ export default function HomePage() {
           </h2>
           <p className="mt-8 text-warmgray leading-relaxed text-lg">
             Any lender can issue a term sheet. But can they deliver on what
-            it says? Our job is to make sure they do.
+            it says? We&rsquo;ve been making sure they do since 2014.
           </p>
-          <Link
-            href="/why-sage-creek"
-            className="mt-8 inline-flex items-center gap-2 text-navy-500 font-medium text-sm uppercase tracking-[2px] hover:text-sage-400 transition-colors"
-          >
-            How We Get Deals Closed <ArrowRight size={16} />
-          </Link>
+          <p className="mt-4 text-warmgray leading-relaxed text-lg">
+            We clear the market, deliver the best pricing available, and stay
+            with your deal until it funds.{" "}
+            <strong className="text-warmgray-heading">
+              Execution is what separates a term sheet from a closing.
+            </strong>
+          </p>
         </div>
       </section>
 
-      {/* Stats Bar */}
-      <section className="bg-navy-800 py-16 px-6">
-        <div className="mx-auto max-w-6xl grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
-          {[
-            { value: "$300M+", label: "Closed" },
-            { value: "37+", label: "Transactions" },
-            { value: "10+", label: "Property Types" },
-            { value: "Since 2014", label: "Established" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <p className="font-serif text-3xl md:text-5xl text-white">
-                {stat.value}
-              </p>
-              <p className="mt-2 text-white/60 text-sm uppercase tracking-[2px] font-sans">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* Our Process — 4 steps */}
       <section className="bg-cream py-24 px-6">
@@ -181,11 +162,8 @@ export default function HomePage() {
       <section className="bg-cream py-24 px-6">
         <div className="mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4">
-              Free Tools
-            </p>
             <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading">
-              Run the Numbers Before You Call
+              Run the Numbers
             </h2>
             <p className="mt-4 text-warmgray text-lg max-w-2xl mx-auto">
               Professional-grade CRE calculators — loan payments, DSCR, max

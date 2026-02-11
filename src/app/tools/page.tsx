@@ -110,9 +110,6 @@ export default function ToolsPage() {
       {/* Hero-style header */}
       <section className="bg-navy-800 py-20 px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4">
-            Free Tools
-          </p>
           <h1 className="font-serif text-4xl sm:text-5xl text-white leading-tight">
             CRE Loan Calculators
           </h1>

@@ -1,6 +1,6 @@
 export const SITE_NAME = "Sage Creek Group LLC";
 export const SITE_DESCRIPTION =
-  "Sage Creek Group places $3M-$40M+ commercial real estate loans nationwide. Permanent, bridge, construction & agency financing. $300M+ closed. Submit your deal today.";
+  "Sage Creek Group places $3M+ commercial real estate loans nationwide. Permanent, bridge, construction & agency financing. $300M+ closed. Submit your deal today.";
 export const SITE_URL = "https://www.sagecreekgroup.com";
 
 export const COMPANY_LOCATION = "Idaho, Oregon & Washington";

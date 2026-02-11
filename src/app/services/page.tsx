@@ -107,6 +107,13 @@ export default function ServicesPage() {
             we&rsquo;ve closed with before — the ones who know how to get their
             credit teams to say yes.
           </p>
+          <p className="mt-4 text-warmgray leading-relaxed text-lg">
+            <strong className="text-warmgray-heading">
+              Execution is what separates a term sheet from a closing.
+            </strong>{" "}
+            We deliver the best pricing available, then we stay with your deal
+            until it funds.
+          </p>
         </div>
       </section>
 

@@ -2,7 +2,7 @@ export const PAGE_SEO = {
   home: {
     title: "Commercial Real Estate Financing | CRE Debt Placement Advisory",
     description:
-      "Sage Creek Group places $3M-$40M+ commercial real estate loans nationwide. Permanent, bridge, construction & agency financing. $300M+ closed. Submit your deal today.",
+      "Sage Creek Group places $3M+ commercial real estate loans nationwide. Permanent, bridge, construction & agency financing. $300M+ closed. Submit your deal today.",
   },
   services: {
     title:

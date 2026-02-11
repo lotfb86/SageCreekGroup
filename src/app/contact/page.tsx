@@ -47,7 +47,6 @@ export default function ContactPage() {
       <HeroSection
         image="/images/heroes/contact-hero.jpg"
         title="Submit Your Deal"
-        subtitle="Free Financing Analysis Within 24 Hours"
         height="medium"
       />
 
@@ -56,14 +55,9 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
             {/* Form */}
             <div className="lg:col-span-3">
-              <h2 className="font-serif text-3xl text-warmgray-heading mb-2">
+              <h2 className="font-serif text-3xl text-warmgray-heading mb-8">
                 Tell Us About Your Deal
               </h2>
-              <p className="text-warmgray mb-8">
-                Provide some details about your project and we&rsquo;ll respond
-                with a preliminary financing analysis within one business day.
-                All inquiries are confidential.
-              </p>
 
               {submitted ? (
                 <div className="bg-sage-400/10 border border-sage-400/30 rounded-sm p-10 text-center">

@@ -18,7 +18,18 @@
       "Bash(npx pnpm build)",
       "Bash(ls -la \"C:\\\\Users\\\\Tim Van Valin\\\\.claude-worktrees\\\\SageCreekGroup\\\\adoring-tu\\\\public\\\\images\\\\heroes\"\" 2>&1 || echo \"Directory may not exist \")",
       "WebFetch(domain:unsplash.com)",
-      "WebFetch(domain:images.unsplash.com)"
+      "WebFetch(domain:images.unsplash.com)",
+      "Bash(pnpm dev)",
+      "Bash(taskkill:*)",
+      "Bash(cmd.exe /c \"taskkill /PID 5868 /F\")",
+      "Bash(cmd.exe /c \"taskkill /F /IM node.exe\")",
+      "Bash(npx next build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nOverhaul homepage, sync copy across site, and improve UX\n\n- Replace \"Coming Soon\" testimonials with tools/calculator promotion section\n- Sync homepage process steps with updated Why Sage Creek copy \\(spray and pray, vetted producers, glossy offering memorandums\\)\n- Differentiate homepage hero \\(\"We Know Who Will Finance Your Deal\"\\) from Why Sage Creek hero \\(\"The Best Deal is the One That Closes\"\\)\n- Rewrite all 6 Services page financing type cards with authentic, client-facing copy\n- Add inline \"Run the Numbers\" CTA link on Refinance card to calculator\n- Add \"Discuss a Deal\" per-bio CTAs on About page\n- Make property type pills visually clickable with hover arrows and helper text\n- Remove duplicate \"OUR PROCESS\" label and \"Why Sage Creek\" subtitle from Why Sage Creek hero\n- Update Services intro paragraph with spray-and-pray and vetted producers language\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(pnpm dev:*)",
+      "Bash(curl:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)"
     ]
   }
 }

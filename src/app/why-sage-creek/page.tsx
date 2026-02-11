@@ -31,7 +31,7 @@ export default function WhySageCreekPage() {
     <>
       <HeroSection
         image="/images/heroes/why-hero.jpg"
-        title="The Best Deal is the One That Closes"
+        title="We Know Who Will Finance Your Deal"
       />
 
       {/* The Core Problem */}
@@ -42,22 +42,22 @@ export default function WhySageCreekPage() {
               The Problem We Solve
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading leading-tight">
-              A term sheet isn&rsquo;t a closing.
+              Are You Really Seeing the Full Market?
             </h2>
           </div>
           <div className="mt-8 space-y-6 text-warmgray leading-relaxed text-lg">
             <p>
-              Every lender can issue a competitive term sheet. So can your
-              relationship bank. But the best deal is the one that actually
-              closes — not the one that was priced the best and never funded.
+              Your bank gives you a term sheet. Maybe a second lender does too.
+              You compare the two, pick the better one, and move forward. But
+              can a couple of lenders really represent the vast, fragmented,
+              and constantly shifting capital markets landscape? Of course not.
+              What if the best deal for your project is with a lender
+              you&rsquo;ve never heard of?
             </p>
             <p>
-              We are execution-focused advisors. We clear the market, deliver
-              the best pricing available, and then we stay with your deal until
-              it funds.{" "}
-              <strong className="text-warmgray-heading">
-                Execution is what separates a term sheet from a closing.
-              </strong>
+              That&rsquo;s the gap we fill. We don&rsquo;t replace your banking
+              relationships &mdash; we make sure you&rsquo;re not leaving money
+              on the table because you stopped looking too early.
             </p>
           </div>
         </div>
