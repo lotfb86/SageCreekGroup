@@ -152,7 +152,7 @@ export default function AboutPage() {
                   </p>
 
                   {(member.email || member.phone) && (
-                    <div className="flex flex-wrap gap-4 mt-4 pt-4 border-t border-warmgray/10">
+                    <div className="flex flex-wrap items-center gap-4 mt-4 pt-4 border-t border-warmgray/10">
                       {member.email && (
                         <a
                           href={`mailto:${member.email}`}
@@ -169,6 +169,12 @@ export default function AboutPage() {
                           {member.phone}
                         </a>
                       )}
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-1 text-sage-400 text-sm font-medium hover:text-navy-500 transition-colors ml-auto"
+                      >
+                        Discuss a Deal <ArrowRight size={14} />
+                      </Link>
                     </div>
                   )}
                 </div>

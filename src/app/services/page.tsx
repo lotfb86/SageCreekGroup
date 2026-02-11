@@ -22,7 +22,7 @@ const FINANCING_TYPES = [
     icon: Landmark,
     title: "Permanent Financing",
     scenario:
-      "Your asset is stabilized and performing. Now you need the right long-term debt \u2014 the rate, the term, the structure that locks in your returns.",
+      "Your asset is stabilized and performing. Now you need the debt to match \u2014 the rate, the term, the structure that lets you put this one on the shelf, collect the checks, and move on to the next deal.",
     proof: "We placed a $32M perm loan on a 204-unit Class A apartment at 5.87% with 2 years of interest-only.",
     txSlug: "perm-loan-204-unit-class-a-western-or",
   },
@@ -30,7 +30,7 @@ const FINANCING_TYPES = [
     icon: BrickWall,
     title: "Construction Loans",
     scenario:
-      "Ground-up projects live and die on how the debt is structured. We secure the draw schedule, interest reserve, and completion terms your project actually needs.",
+      "Ground-up projects live and die on how the debt is structured. We structure construction loans that help protect you when things don\u2019t go as planned \u2014 because they never do.",
     proof: "We closed an $36M all-in-one construction loan for an 83-unit subdivision in 30 days, origination to closing.",
     txSlug: "construction-loan-83-unit-subdivision-salem-or",
   },
@@ -38,7 +38,7 @@ const FINANCING_TYPES = [
     icon: Building2,
     title: "Bridge Lending",
     scenario:
-      "Your bank won\u2019t renew. You\u2019re mid-lease-up. You need to close fast. Bridge financing gets you from here to there on your timeline.",
+      "Your bank won\u2019t renew. You\u2019re mid-lease-up, and out of runway. Or maybe bridge is the plan from day one. Either way, you need speed, certainty, and a broker with a deep Rolodex. We know the bridge market cold and we close fast.",
     proof: "We closed a $2.1M bridge loan for a 50%-vacant Class A office in 14 days when the bank refused to extend.",
     txSlug: "senior-bridge-class-a-office",
   },
@@ -46,7 +46,8 @@ const FINANCING_TYPES = [
     icon: ArrowLeftRight,
     title: "Refinance",
     scenario:
-      "You need better terms, lower rates, or cash out for new investments. We find the execution that improves your position.",
+      "Your rate is too high, your term is too short, or you\u2019re sitting on equity that should be working. We don\u2019t refinance for the sake of it \u2014 if it doesn\u2019t meaningfully improve your position, we\u2019ll tell you to stay put.",
+    scenarioLink: { href: "/tools/mortgage-calculator#refinance", label: "Run the Numbers" },
     proof: "We refinanced a 160-unit Class A apartment at 5.99% fixed before the property was even stabilized \u2014 lender only required 75% occupancy.",
     txSlug: "perm-loan-160-unit-breckenridge-nampa-id",
   },
@@ -54,7 +55,7 @@ const FINANCING_TYPES = [
     icon: Shield,
     title: "Agency Lending",
     scenario:
-      "You own or are acquiring multifamily. Fannie Mae, Freddie Mac, and HUD programs can deliver the most competitive long-term rates in the market.",
+      "Agency and HUD programs rule the long-term multifamily lending market. But not every originator is upfront about what\u2019s baked into the spread. We show you exactly what makes up your rate \u2014 lender margin, servicing, and fees \u2014 full transparency, no shenanigans.",
     proof: "We placed a non-recourse agency loan on a 28-unit apartment 100 miles from the nearest MSA at 3.95% with 5 years of interest-only.",
     txSlug: "perm-financing-28-unit-apartment-or",
   },
@@ -62,7 +63,7 @@ const FINANCING_TYPES = [
     icon: Briefcase,
     title: "Specialty & Creative Structures",
     scenario:
-      "EB5 capital stacks, recourse burn-offs, bridge-to-HUD, 100% LTC \u2014 if your deal doesn\u2019t fit a box, that\u2019s where we add the most value.",
+      "PACE financing, sub-debt, recourse burn-offs, bridge-to-HUD, high-leverage structures \u2014 when your deal doesn\u2019t fit a box, that\u2019s where we add the most value. We\u2019ve structured it before and we know who will fund it.",
     proof: "We structured a $7M mini-perm for an assisted living facility with a subordinate EB5 note and 50% recourse burn-off at DSCR thresholds.",
     txSlug: "alf-mini-perm-pacific-northwest",
   },
@@ -102,8 +103,9 @@ export default function ServicesPage() {
           <p className="mt-6 text-warmgray leading-relaxed text-lg">
             We maintain relationships with hundreds of capital sources — banks,
             life companies, CMBS, agencies, debt funds, and private capital. We
-            don&rsquo;t shop your deal around. We take it directly to the
-            decision-makers most likely to close it.
+            don&rsquo;t spray and pray. We take your deal to vetted producers
+            we&rsquo;ve closed with before — the ones who know how to get their
+            credit teams to say yes.
           </p>
         </div>
       </section>
@@ -136,6 +138,17 @@ export default function ServicesPage() {
                 </h3>
                 <p className="text-warmgray text-sm leading-relaxed mb-4">
                   {type.scenario}
+                  {type.scenarioLink && (
+                    <>
+                      {" "}
+                      <Link
+                        href={type.scenarioLink.href}
+                        className="inline-flex items-center gap-1 text-sage-400 font-medium hover:text-navy-500 transition-colors"
+                      >
+                        {type.scenarioLink.label} <ArrowRight size={12} />
+                      </Link>
+                    </>
+                  )}
                 </p>
                 <div className="mt-auto pt-4 border-t border-warmgray/10">
                   <p className="text-warmgray/80 text-xs leading-relaxed italic mb-3">
@@ -171,12 +184,16 @@ export default function ServicesPage() {
               <Link
                 key={pt.slug}
                 href={`/transactions?propertyType=${pt.slug}`}
-                className="px-5 py-2.5 bg-cream text-warmgray-heading text-sm font-medium rounded-sm hover:bg-sage-400 hover:text-white transition-all"
+                className="group inline-flex items-center gap-1.5 px-5 py-2.5 bg-cream border border-warmgray/10 text-warmgray-heading text-sm font-medium rounded-sm hover:bg-sage-400 hover:border-sage-400 hover:text-white transition-all"
               >
                 {pt.label}
+                <ArrowRight size={12} className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
               </Link>
             ))}
           </div>
+          <p className="text-center mt-6 text-warmgray/60 text-sm">
+            Click any property type to see our closed transactions.
+          </p>
         </div>
       </section>
 

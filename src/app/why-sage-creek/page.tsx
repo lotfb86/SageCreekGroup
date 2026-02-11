@@ -32,7 +32,6 @@ export default function WhySageCreekPage() {
       <HeroSection
         image="/images/heroes/why-hero.jpg"
         title="The Best Deal is the One That Closes"
-        subtitle="Why Sage Creek"
       />
 
       {/* The Core Problem */}
@@ -68,9 +67,6 @@ export default function WhySageCreekPage() {
       <section className="bg-cream py-24 px-6">
         <div className="mx-auto max-w-5xl">
           <div className="text-center mb-16">
-            <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4">
-              Our Process
-            </p>
             <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading">
               Our Process
             </h2>
@@ -80,23 +76,23 @@ export default function WhySageCreekPage() {
             {[
               {
                 step: "01",
-                title: "Initial Project Analysis",
-                desc: "We immediately identify lenders we know will be interested in your project. We go through all of the potential issues that may arise up front and suggest solutions so they can be resolved in the time necessary to close your transaction.",
+                title: "Deal Analysis",
+                desc: "We start by understanding your project inside and out \u2014 the asset, the capital stack, the timeline, and the exit. We identify potential issues up front and suggest solutions so they can be resolved well before they become problems at the closing table.",
               },
               {
                 step: "02",
-                title: "Presentation",
-                desc: "We prepare a brief report on your project to present to lenders. Lenders are busy. They don\u2019t have time to read extensive loan proposals or market analyses. They simply want to see the facts and we want to spark their interest.",
+                title: "Packaging the Deal",
+                desc: "We prepare a brief, focused report on your project to present to lenders. Lenders are busy \u2014 they don\u2019t care about glossy offering memorandums or filler. They want to see the facts. We give them exactly what they need to spark interest and move fast.",
               },
               {
                 step: "03",
                 title: "Sourcing the Debt",
-                desc: "We know who is likely to finance your project from the outset and we have strong working relationships with them. We don\u2019t shop your deal around. We simply take it to the decision-makers at carefully selected companies and get quick feedback.",
+                desc: "We know who is likely to finance your project from the outset. We don\u2019t spray and pray \u2014 blasting your loan package to every lender on the planet and hoping something sticks. We take your deal to vetted producers we\u2019ve closed with before \u2014 people who know how to navigate their own credit teams and get deals approved. The people you work with determine whether your deal closes. That\u2019s why we only work with producers who perform.",
               },
               {
                 step: "04",
-                title: "Working Together",
-                desc: "With the lender in place, we live with your deal until it closes. We are your advisors, helping you overcome hurdles and lender requirements so you close the deal as quickly as possible.",
+                title: "Closing the Deal",
+                desc: "With the lender in place, we live with your deal until it closes. We are your advisors \u2014 helping you clear lender requirements, overcome hurdles, and keep the process moving so you close on your timeline, not theirs.",
               },
             ].map((step) => (
               <div

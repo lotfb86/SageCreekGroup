@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Quote } from "lucide-react";
+import { ArrowRight, Calculator, BarChart3, ArrowLeftRight } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
 import { getFeaturedTransactions } from "@/lib/transactions";
 
@@ -12,7 +12,7 @@ export default function HomePage() {
       {/* Hero — The Tagline */}
       <HeroSection
         image="/images/heroes/services-hero.jpg"
-        title="The Best Deal is the One That Closes"
+        title="We Know Who Will Finance Your Deal"
         subtitle="Sage Creek Group LLC"
         height="full"
         ctaText="Submit Your Deal"
@@ -80,23 +80,23 @@ export default function HomePage() {
             {[
               {
                 step: "01",
-                title: "Initial Project Analysis",
-                desc: "We immediately identify lenders we know will be interested in your project. We go through all of the potential issues that may arise up front and suggest solutions so they can be resolved in the time necessary to close your transaction.",
+                title: "Deal Analysis",
+                desc: "We start by understanding your project inside and out \u2014 the asset, the capital stack, the timeline, and the exit. We identify potential issues up front and suggest solutions so they can be resolved well before they become problems at the closing table.",
               },
               {
                 step: "02",
-                title: "Presentation",
-                desc: "We prepare a brief report on your project to present to lenders. Lenders are busy. They don\u2019t have time to read extensive loan proposals or market analyses. They simply want to see the facts and we want to spark their interest.",
+                title: "Packaging the Deal",
+                desc: "We prepare a brief, focused report on your project to present to lenders. Lenders are busy \u2014 they don\u2019t care about glossy offering memorandums or filler. They want to see the facts. We give them exactly what they need to spark interest and move fast.",
               },
               {
                 step: "03",
                 title: "Sourcing the Debt",
-                desc: "We know who is likely to finance your project from the outset and we have strong working relationships with them. We don\u2019t shop your deal around. We simply take it to the decision-makers at carefully selected companies and get quick feedback.",
+                desc: "We know who is likely to finance your project from the outset. We don\u2019t spray and pray \u2014 blasting your loan package to every lender on the planet and hoping something sticks. We take your deal to vetted producers we\u2019ve closed with before \u2014 people who know how to navigate their own credit teams and get deals approved.",
               },
               {
                 step: "04",
-                title: "Working Together",
-                desc: "With the lender in place, we live with your deal until it closes. We are your advisors, helping you overcome hurdles and lender requirements so you close the deal as quickly as possible.",
+                title: "Closing the Deal",
+                desc: "With the lender in place, we live with your deal until it closes. We are your advisors \u2014 helping you clear lender requirements, overcome hurdles, and keep the process moving so you close on your timeline, not theirs.",
               },
             ].map((step) => (
               <div
@@ -177,20 +177,66 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Placeholder */}
+      {/* Tools Promotion */}
       <section className="bg-cream py-24 px-6">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4">
-            Client Testimonials
-          </p>
-          <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading mb-8">
-            What Our Clients Say
-          </h2>
-          <div className="bg-white rounded-sm p-12 shadow-sm">
-            <Quote size={40} className="text-sage-400/20 mx-auto mb-4" strokeWidth={1.5} />
-            <p className="text-warmgray italic text-lg">
-              Client testimonials coming soon.
+        <div className="mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4">
+              Free Tools
             </p>
+            <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading">
+              Run the Numbers Before You Call
+            </h2>
+            <p className="mt-4 text-warmgray text-lg max-w-2xl mx-auto">
+              Professional-grade CRE calculators — loan payments, DSCR, max
+              loan amount, cap rate, IRR, equity waterfalls, and more.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
+            {[
+              {
+                icon: Calculator,
+                title: "Loan Payment",
+                desc: "Monthly & annual debt service at any rate and amortization.",
+              },
+              {
+                icon: BarChart3,
+                title: "DSCR & Max Loan",
+                desc: "Know your coverage ratio and how much a lender will approve.",
+              },
+              {
+                icon: ArrowLeftRight,
+                title: "Refinance Savings",
+                desc: "See exactly what a rate reduction puts back in your pocket.",
+              },
+            ].map((tool) => (
+              <div
+                key={tool.title}
+                className="bg-white rounded-sm p-6 shadow-sm text-center"
+              >
+                <tool.icon
+                  size={28}
+                  className="text-sage-400 mx-auto mb-3"
+                  strokeWidth={1.5}
+                />
+                <h3 className="font-serif text-lg text-warmgray-heading mb-2">
+                  {tool.title}
+                </h3>
+                <p className="text-warmgray text-sm leading-relaxed">
+                  {tool.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/tools/mortgage-calculator"
+              className="inline-flex items-center gap-2 px-8 py-3 border-2 border-navy-800 text-navy-800 font-sans text-sm uppercase tracking-[2px] font-medium hover:bg-navy-800 hover:text-white transition-all rounded-sm"
+            >
+              Open Calculator Suite <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>
