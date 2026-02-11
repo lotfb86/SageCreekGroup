@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx next build)",
+      "Bash(pnpm build:*)",
+      "Bash(where:*)",
+      "Bash(where npm:*)",
+      "Bash(cmd /c \"where pnpm & where npm & where node\")",
+      "Bash(cmd /c \"where pnpm\")",
+      "Bash(powershell -Command \"Get-Command pnpm -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source; Get-Command npm -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source; Get-Command node -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source\")",
+      "Bash(export PATH=\"/c/Program Files/nodejs:$PATH\")",
+      "Bash(export PATH=\"/c/Program Files/nodejs:$HOME/AppData/Roaming/npm:$HOME/AppData/Local/pnpm:$PATH\")",
+      "Bash(corepack enable:*)",
+      "Bash(pnpm -v:*)",
+      "Bash(npm exec:*)",
+      "WebFetch(domain:www.sagecreekgroup.com)",
+      "Bash(ls \"C:\\\\Users\\\\Tim Van Valin\\\\.claude-worktrees\\\\SageCreekGroup\\\\adoring-tu\\\\public\\\\images\\\\transactions\"\" 2>/dev/null; echo \"---\"; echo \"Directory exists check done \")",
+      "Bash(npx pnpm build)",
+      "Bash(ls -la \"C:\\\\Users\\\\Tim Van Valin\\\\.claude-worktrees\\\\SageCreekGroup\\\\adoring-tu\\\\public\\\\images\\\\heroes\"\" 2>&1 || echo \"Directory may not exist \")",
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:images.unsplash.com)"
+    ]
+  }
+}

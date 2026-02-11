@@ -1,53 +1,49 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Building2, Landmark, BrickWall, Shield, Quote } from "lucide-react";
+import { ArrowRight, Quote } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
 import { getFeaturedTransactions } from "@/lib/transactions";
-import { formatCurrency } from "@/lib/utils";
 
 export default function HomePage() {
   const featured = getFeaturedTransactions();
 
   return (
     <>
-      {/* Hero */}
+      {/* Hero — The Tagline */}
       <HeroSection
-        image="/images/heroes/home-hero.jpg"
-        title="Financing Solutions for Commercial Real Estate"
-        subtitle="Boutique Advisory — Pacific Northwest & Nationwide"
+        image="/images/heroes/services-hero.jpg"
+        title="The Best Deal is the One That Closes"
+        subtitle="Sage Creek Group LLC"
         height="full"
         ctaText="Submit Your Deal"
         ctaHref="/contact"
       />
 
-      {/* Intro */}
+      {/* The Problem / The Promise */}
       <section className="bg-white py-24 px-6">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4">
-            Our Approach
+            Why We Exist
           </p>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-warmgray-heading leading-tight">
-            Not just loans.&nbsp;
-            <em className="italic">Solutions.</em>
+            Finding capital isn&rsquo;t the hard part.
+            <br />
+            <em className="italic">Closing the deal is.</em>
           </h2>
-          <p className="mt-6 text-warmgray leading-relaxed text-lg">
-            You have a deal to close and a timeline to hit. You shouldn&rsquo;t
-            have to cold-call twenty lenders to find out who will actually
-            compete for your business. We take your $3M townhome community or
-            your $40M mixed-use development to the full capital markets — so
-            you see every option, lenders compete for your deal, and you close
-            on the best available terms.
+          <p className="mt-8 text-warmgray leading-relaxed text-lg">
+            Any lender can issue a term sheet. But can they deliver on what
+            it says? Our job is to make sure they do.
           </p>
           <Link
             href="/why-sage-creek"
             className="mt-8 inline-flex items-center gap-2 text-navy-500 font-medium text-sm uppercase tracking-[2px] hover:text-sage-400 transition-colors"
           >
-            See How It Works <ArrowRight size={16} />
+            How We Get Deals Closed <ArrowRight size={16} />
           </Link>
         </div>
       </section>
 
-      {/* Stats Bar — 4 stats */}
+      {/* Stats Bar */}
       <section className="bg-navy-800 py-16 px-6">
         <div className="mx-auto max-w-6xl grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
           {[
@@ -68,73 +64,56 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Preview — 4 cards */}
+      {/* Our Process — 4 steps */}
       <section className="bg-cream py-24 px-6">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4">
-              Financing Solutions
+              How We Work
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading">
-              Built Around How You Actually Do Deals
+              Our Process
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                icon: Landmark,
-                title: "Permanent Financing",
-                desc: "Your asset is stabilized and performing. Now you need long-term debt that locks in your returns — the right rate, the right term, the right structure. We source from life companies, banks, CMBS, and agency lenders so you see the full picture before you commit.",
+                step: "01",
+                title: "Initial Project Analysis",
+                desc: "We immediately identify lenders we know will be interested in your project. We go through all of the potential issues that may arise up front and suggest solutions so they can be resolved in the time necessary to close your transaction.",
               },
               {
-                icon: BrickWall,
-                title: "Construction Loans",
-                desc: "Ground-up projects live and die on how the debt is structured. We help you secure construction financing with the draw schedule, interest reserve, and completion terms your project actually needs — whether it's a 20-unit townhome site or a 200-unit apartment community.",
+                step: "02",
+                title: "Presentation",
+                desc: "We prepare a brief report on your project to present to lenders. Lenders are busy. They don\u2019t have time to read extensive loan proposals or market analyses. They simply want to see the facts and we want to spark their interest.",
               },
               {
-                icon: Building2,
-                title: "Bridge Lending",
-                desc: "Acquiring a value-add property? In lease-up? Need to close fast while you line up permanent debt? Bridge financing gets you from here to there. We find the short-term capital that fits your business plan and your exit timeline.",
+                step: "03",
+                title: "Sourcing the Debt",
+                desc: "We know who is likely to finance your project from the outset and we have strong working relationships with them. We don\u2019t shop your deal around. We simply take it to the decision-makers at carefully selected companies and get quick feedback.",
               },
               {
-                icon: Shield,
-                title: "Agency Lending",
-                desc: "If you own or are acquiring multifamily, agency debt from Fannie Mae, Freddie Mac, or HUD can deliver the most competitive long-term rates in the market. We know the programs, the process, and which execution fits your property today.",
+                step: "04",
+                title: "Working Together",
+                desc: "With the lender in place, we live with your deal until it closes. We are your advisors, helping you overcome hurdles and lender requirements so you close the deal as quickly as possible.",
               },
-            ].map((service) => (
+            ].map((step) => (
               <div
-                key={service.title}
-                className="bg-white rounded-sm p-8 shadow-sm hover:shadow-md transition-shadow"
+                key={step.step}
+                className="bg-white rounded-sm p-8 shadow-sm"
               >
-                <service.icon
-                  size={32}
-                  className="text-sage-400 mb-4"
-                  strokeWidth={1.5}
-                />
-                <h3 className="font-serif text-xl text-warmgray-heading mb-3">
-                  {service.title}
+                <span className="font-serif text-4xl text-sage-400/20">
+                  {step.step}
+                </span>
+                <h3 className="font-serif text-xl text-warmgray-heading mt-2 mb-3">
+                  {step.title}
                 </h3>
-                <p className="text-warmgray text-sm leading-relaxed mb-4">
-                  {service.desc}
+                <p className="text-warmgray text-sm leading-relaxed">
+                  {step.desc}
                 </p>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center gap-1 text-navy-500 text-xs uppercase tracking-[2px] font-medium hover:text-sage-400 transition-colors"
-                >
-                  Learn More <ArrowRight size={12} />
-                </Link>
               </div>
             ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/services"
-              className="inline-flex items-center gap-2 text-navy-500 font-medium text-sm uppercase tracking-[2px] hover:text-sage-400 transition-colors"
-            >
-              View All Services <ArrowRight size={16} />
-            </Link>
           </div>
         </div>
       </section>
@@ -147,7 +126,7 @@ export default function HomePage() {
               Track Record
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading">
-              Featured Transactions
+              Deals We&rsquo;ve Closed
             </h2>
           </div>
 
@@ -177,9 +156,11 @@ export default function HomePage() {
                     {tx.amountDisplay}
                   </h3>
                   <p className="text-warmgray text-sm mt-1">{tx.title}</p>
-                  <p className="text-warmgray/60 text-xs mt-1">
-                    {tx.city}, {tx.state}
-                  </p>
+                  {(tx.city || tx.state) && (
+                    <p className="text-warmgray/60 text-xs mt-1">
+                      {[tx.city, tx.state].filter(Boolean).join(", ")}
+                    </p>
+                  )}
                 </div>
               </Link>
             ))}
@@ -226,7 +207,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-navy-800/80" />
         <div className="relative z-10 mx-auto max-w-3xl text-center">
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white leading-tight">
-            You have a deal. Let&rsquo;s find the right debt.
+            You have a deal. We&rsquo;ll get it closed.
           </h2>
           <p className="mt-4 text-white/70 text-lg">
             Tell us about your property and timeline. We&rsquo;ll come back

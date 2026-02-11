@@ -295,6 +295,32 @@ export default function ContactPage() {
                       </div>
                     </div>
 
+                    {/* Jeff */}
+                    <div>
+                      <p className="text-warmgray-heading font-medium">
+                        {CONTACT.jeff.name}
+                      </p>
+                      <p className="text-warmgray text-sm mb-2">
+                        {CONTACT.jeff.title}
+                      </p>
+                      <div className="space-y-1">
+                        <a
+                          href={`tel:${CONTACT.jeff.phone}`}
+                          className="flex items-center gap-2 text-warmgray text-sm hover:text-sage-400 transition-colors"
+                        >
+                          <Phone size={14} />
+                          {CONTACT.jeff.phone}
+                        </a>
+                        <a
+                          href={`mailto:${CONTACT.jeff.email}`}
+                          className="flex items-center gap-2 text-warmgray text-sm hover:text-sage-400 transition-colors"
+                        >
+                          <Mail size={14} />
+                          {CONTACT.jeff.email}
+                        </a>
+                      </div>
+                    </div>
+
                     <div className="pt-4 border-t border-warmgray/10">
                       <div className="flex items-start gap-2 text-warmgray text-sm">
                         <MapPin size={14} className="mt-0.5 flex-shrink-0" />

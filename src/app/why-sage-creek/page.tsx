@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Check, DollarSign } from "lucide-react";
+import { ArrowRight, DollarSign } from "lucide-react";
 import { PAGE_SEO } from "@/lib/seo";
 import HeroSection from "@/components/sections/HeroSection";
 
@@ -11,22 +11,18 @@ export const metadata: Metadata = {
 
 const COMPARISON_DATA = {
   bank: [
-    { label: "Rate", value: "5.75%" },
     { label: "Term", value: "5 Years" },
-    { label: "Amortization", value: "25 Years" },
+    { label: "Rate", value: "4.25% Fixed" },
     { label: "LTV", value: "65%" },
-    { label: "Recourse", value: "Full Recourse" },
-    { label: "Prepayment", value: "2-1-0" },
-    { label: "Annual Debt Service", value: "$710,400" },
+    { label: "Lender Fee", value: "50 bps" },
+    { label: "Annual Debt Service", value: "$651,600" },
   ],
   sageCreek: [
-    { label: "Rate", value: "4.45%", better: true },
-    { label: "Term", value: "10 Years", better: true },
-    { label: "Amortization", value: "30 Years", better: true },
-    { label: "LTV", value: "72%", better: true },
-    { label: "Recourse", value: "Non-Recourse", better: true },
-    { label: "Prepayment", value: "Yield Maintenance" },
-    { label: "Annual Debt Service", value: "$580,200", better: true },
+    { label: "Term", value: "5 Years" },
+    { label: "Rate", value: "3.65% Fixed", better: true },
+    { label: "LTV", value: "68%", better: true },
+    { label: "Lender Fee", value: "None", better: true },
+    { label: "Annual Debt Service", value: "$618,000", better: true },
   ],
 };
 
@@ -35,100 +31,87 @@ export default function WhySageCreekPage() {
     <>
       <HeroSection
         image="/images/heroes/why-hero.jpg"
-        title="Why Sage Creek?"
-        subtitle="Your Advocate in the Capital Markets"
+        title="The Best Deal is the One That Closes"
+        subtitle="Why Sage Creek"
       />
 
-      {/* Insurance Broker Analogy */}
+      {/* The Core Problem */}
       <section className="bg-white py-24 px-6">
         <div className="mx-auto max-w-3xl">
-          <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4 text-center">
-            Our Value Proposition
-          </p>
-          <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading leading-tight text-center">
-            Think of us as your insurance broker&nbsp;&mdash; but for debt.
-          </h2>
+          <div className="text-center">
+            <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4">
+              The Problem We Solve
+            </p>
+            <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading leading-tight">
+              A term sheet isn&rsquo;t a closing.
+            </h2>
+          </div>
           <div className="mt-8 space-y-6 text-warmgray leading-relaxed text-lg">
             <p>
-              When you need insurance, you don&rsquo;t call every carrier in the
-              country. You call a broker who knows the market, understands your
-              needs, and can quickly identify the best policy at the best price.
+              Every lender can issue a competitive term sheet. So can your
+              relationship bank. But the best deal is the one that actually
+              closes — not the one that was priced the best and never funded.
             </p>
             <p>
+              We are execution-focused advisors. We clear the market, deliver
+              the best pricing available, and then we stay with your deal until
+              it funds.{" "}
               <strong className="text-warmgray-heading">
-                Sage Creek Group works the same way for commercial real estate
-                debt.
-              </strong>{" "}
-              We maintain active relationships with hundreds of capital sources
-              — from national banks and life companies to CMBS lenders, agencies,
-              debt funds, and private capital providers. When you engage us, we
-              go to market on your behalf, presenting your deal to the sources
-              most likely to offer the best terms.
-            </p>
-            <p>
-              The result? You get multiple competitive quotes, better terms, and
-              a clear understanding of your options — all without the time and
-              effort of approaching each lender individually.
+                Execution is what separates a term sheet from a closing.
+              </strong>
             </p>
           </div>
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* SCG's System */}
       <section className="bg-cream py-24 px-6">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4">
-              The Sage Creek Advantage
+              Our Process
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading">
-              What Sets Us Apart
+              Our Process
             </h2>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                title: "Broad Market Access",
-                desc: "We cast a wide net across the capital markets, ensuring you see the full range of options available for your specific deal profile.",
+                step: "01",
+                title: "Initial Project Analysis",
+                desc: "We immediately identify lenders we know will be interested in your project. We go through all of the potential issues that may arise up front and suggest solutions so they can be resolved in the time necessary to close your transaction.",
               },
               {
-                title: "Competitive Tension",
-                desc: "By soliciting multiple quotes simultaneously, we create competitive tension among lenders — driving better rates and terms for you.",
+                step: "02",
+                title: "Presentation",
+                desc: "We prepare a brief report on your project to present to lenders. Lenders are busy. They don\u2019t have time to read extensive loan proposals or market analyses. They simply want to see the facts and we want to spark their interest.",
               },
               {
-                title: "Deep Relationships",
-                desc: "Our long-standing relationships with lenders give us insight into their current appetites, pricing, and decision-making processes.",
+                step: "03",
+                title: "Sourcing the Debt",
+                desc: "We know who is likely to finance your project from the outset and we have strong working relationships with them. We don\u2019t shop your deal around. We simply take it to the decision-makers at carefully selected companies and get quick feedback.",
               },
               {
-                title: "Deal Structuring Expertise",
-                desc: "We help position your deal to match lender preferences, maximizing your chances of approval and favorable terms.",
+                step: "04",
+                title: "Working Together",
+                desc: "With the lender in place, we live with your deal until it closes. We are your advisors, helping you overcome hurdles and lender requirements so you close the deal as quickly as possible.",
               },
-              {
-                title: "Time Savings",
-                desc: "Instead of approaching dozens of lenders yourself, you make one call to us and we handle the entire process from application through closing.",
-              },
-              {
-                title: "Transparent Process",
-                desc: "You receive clear, side-by-side comparisons of all quotes so you can make an informed decision with complete confidence.",
-              },
-            ].map((benefit) => (
+            ].map((step) => (
               <div
-                key={benefit.title}
-                className="flex gap-4 bg-white rounded-sm p-6 shadow-sm"
+                key={step.step}
+                className="bg-white rounded-sm p-8 shadow-sm"
               >
-                <div className="flex-shrink-0 mt-1">
-                  <div className="w-6 h-6 rounded-full bg-sage-400/10 flex items-center justify-center">
-                    <Check size={14} className="text-sage-400" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-serif text-lg text-warmgray-heading mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-warmgray text-sm leading-relaxed">
-                    {benefit.desc}
-                  </p>
-                </div>
+                <span className="font-serif text-4xl text-sage-400/20">
+                  {step.step}
+                </span>
+                <h3 className="font-serif text-xl text-warmgray-heading mt-2 mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-warmgray text-sm leading-relaxed">
+                  {step.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -140,15 +123,15 @@ export default function WhySageCreekPage() {
         <div className="mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4">
-              Case Study
+              Real Results
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading">
-              Real Results: Side-by-Side Comparison
+              Your Bank vs. Sage Creek
             </h2>
             <p className="mt-4 text-warmgray text-lg">
-              A recent $10M multifamily refinance — comparing what the
-              borrower&rsquo;s relationship bank offered versus what Sage Creek
-              sourced.
+              A $10M closed transaction — what the borrower&rsquo;s
+              relationship bank offered versus what we sourced. This happens
+              all the time.
             </p>
           </div>
 
@@ -205,12 +188,12 @@ export default function WhySageCreekPage() {
               <DollarSign size={24} className="text-sage-400" />
             </div>
             <p className="font-serif text-3xl text-warmgray-heading mb-2">
-              $130,200 saved per year
+              $33,600 saved per year + $50,000 in fees
             </p>
             <p className="text-warmgray text-sm max-w-lg mx-auto">
-              The Sage Creek result saved the borrower over $130,000 annually in
-              debt service while providing better terms across every metric —
-              including non-recourse, a longer term, and higher leverage.
+              60 basis points off the rate, higher leverage, zero lender fee,
+              and over $33,000 in annual debt service savings. On a 5-year
+              term, that&rsquo;s $218,000 back in the borrower&rsquo;s pocket.
             </p>
           </div>
         </div>

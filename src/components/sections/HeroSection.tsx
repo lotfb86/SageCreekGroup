@@ -9,6 +9,7 @@ interface HeroSectionProps {
   height?: "full" | "large" | "medium";
   ctaText?: string;
   ctaHref?: string;
+  imagePosition?: string;
 }
 
 const heightClasses = {
@@ -24,6 +25,7 @@ export default function HeroSection({
   height = "large",
   ctaText,
   ctaHref,
+  imagePosition,
 }: HeroSectionProps) {
   return (
     <section className={`relative ${heightClasses[height]} flex items-center justify-center overflow-hidden`}>
@@ -33,6 +35,7 @@ export default function HeroSection({
         alt=""
         fill
         className="object-cover"
+        style={imagePosition ? { objectPosition: imagePosition } : undefined}
         priority
         sizes="100vw"
       />

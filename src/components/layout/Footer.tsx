@@ -83,6 +83,16 @@ export default function Footer() {
                   {CONTACT.pat.email}
                 </a>
               </div>
+              <div>
+                <p className="text-white/80">{CONTACT.jeff.name}</p>
+                <p>{CONTACT.jeff.phone}</p>
+                <a
+                  href={`mailto:${CONTACT.jeff.email}`}
+                  className="hover:text-white transition-colors"
+                >
+                  {CONTACT.jeff.email}
+                </a>
+              </div>
             </div>
           </div>
         </div>

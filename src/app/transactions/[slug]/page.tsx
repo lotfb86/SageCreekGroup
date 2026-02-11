@@ -84,9 +84,11 @@ export default async function TransactionDetailPage({
               <h2 className="font-serif text-xl text-warmgray-heading mt-2">
                 {tx.title}
               </h2>
-              <p className="text-warmgray/60 text-sm mt-1">
-                {tx.city}, {tx.state}
-              </p>
+              {(tx.city || tx.state) && (
+                <p className="text-warmgray/60 text-sm mt-1">
+                  {[tx.city, tx.state].filter(Boolean).join(", ")}
+                </p>
+              )}
 
               <div className="mt-8">
                 <p className="text-warmgray leading-relaxed">

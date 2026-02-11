@@ -30,4 +30,10 @@ export const CONTACT = {
     phone: "(541) 658-9011",
     email: "Pat@SageCreekGroup.com",
   },
+  jeff: {
+    name: "Jeff Verble",
+    title: "Senior Vice President",
+    phone: "(509) 991-8321",
+    email: "Jeff@SageCreekGroup.com",
+  },
 } as const;

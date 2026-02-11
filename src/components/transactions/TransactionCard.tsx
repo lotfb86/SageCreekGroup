@@ -35,9 +35,11 @@ export default function TransactionCard({ tx }: { tx: Transaction }) {
           {tx.amountDisplay}
         </h3>
         <p className="text-warmgray text-sm mt-1">{tx.title}</p>
-        <p className="text-warmgray/60 text-xs mt-1">
-          {tx.city}, {tx.state}
-        </p>
+        {(tx.city || tx.state) && (
+          <p className="text-warmgray/60 text-xs mt-1">
+            {[tx.city, tx.state].filter(Boolean).join(", ")}
+          </p>
+        )}
         {termEntries.length > 0 && (
           <div className="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-warmgray/10">
             {termEntries.map(([key, value]) => (

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 
@@ -27,18 +26,14 @@ export default function Header() {
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
-            {/* Logo */}
-            <Link href="/" className="relative z-10 flex items-center gap-3">
-              <Image
-                src="/images/logo-white.png"
-                alt="Sage Creek Group LLC"
-                width={180}
-                height={60}
-                className={`h-10 w-auto transition-all duration-300 ${
-                  scrolled ? "brightness-0" : ""
-                }`}
-                priority
-              />
+            {/* Wordmark */}
+            <Link
+              href="/"
+              className={`relative z-10 font-serif text-xl tracking-wide transition-colors duration-300 ${
+                scrolled ? "text-warmgray-heading" : "text-white"
+              }`}
+            >
+              Sage Creek Group
             </Link>
 
             {/* Desktop Navigation */}

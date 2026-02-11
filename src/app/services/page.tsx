@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PAGE_SEO } from "@/lib/seo";
 import {
   Landmark,
   BrickWall,
@@ -11,6 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
+import { PAGE_SEO } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: PAGE_SEO.services.title,
@@ -21,38 +21,50 @@ const FINANCING_TYPES = [
   {
     icon: Landmark,
     title: "Permanent Financing",
-    desc: "Long-term fixed and variable rate loans from life companies, agencies, banks, and CMBS lenders. Terms typically range from 5 to 30 years.",
-    terms: ["5–30 year terms", "Up to 75% LTV", "Fixed or floating rate", "Non-recourse available"],
+    scenario:
+      "Your asset is stabilized and performing. Now you need the right long-term debt \u2014 the rate, the term, the structure that locks in your returns.",
+    proof: "We placed a $32M perm loan on a 204-unit Class A apartment at 5.87% with 2 years of interest-only.",
+    txSlug: "perm-loan-204-unit-class-a-western-or",
   },
   {
     icon: BrickWall,
     title: "Construction Loans",
-    desc: "Ground-up construction financing for multifamily, mixed-use, and commercial developments with competitive rates and flexible draw schedules.",
-    terms: ["12–36 month terms", "Up to 65% LTC", "Interest-only during construction", "Recourse typical"],
+    scenario:
+      "Ground-up projects live and die on how the debt is structured. We secure the draw schedule, interest reserve, and completion terms your project actually needs.",
+    proof: "We closed an $36M all-in-one construction loan for an 83-unit subdivision in 30 days, origination to closing.",
+    txSlug: "construction-loan-83-unit-subdivision-salem-or",
   },
   {
     icon: Building2,
-    title: "Bridge Loans",
-    desc: "Short-term bridge financing for transitional assets, value-add opportunities, and properties requiring stabilization before permanent placement.",
-    terms: ["6–36 month terms", "Up to 80% LTV", "Interest-only", "Flexible prepayment"],
+    title: "Bridge Lending",
+    scenario:
+      "Your bank won\u2019t renew. You\u2019re mid-lease-up. You need to close fast. Bridge financing gets you from here to there on your timeline.",
+    proof: "We closed a $2.1M bridge loan for a 50%-vacant Class A office in 14 days when the bank refused to extend.",
+    txSlug: "senior-bridge-class-a-office",
   },
   {
     icon: ArrowLeftRight,
     title: "Refinance",
-    desc: "Refinance existing debt to secure better terms, lower rates, or extract equity for new investments and property improvements.",
-    terms: ["5–30 year terms", "Rate & term or cash-out", "Fixed or floating", "Non-recourse available"],
+    scenario:
+      "You need better terms, lower rates, or cash out for new investments. We find the execution that improves your position.",
+    proof: "We refinanced a 160-unit Class A apartment at 5.99% fixed before the property was even stabilized \u2014 lender only required 75% occupancy.",
+    txSlug: "perm-loan-160-unit-breckenridge-nampa-id",
   },
   {
     icon: Shield,
-    title: "Mezzanine & Preferred Equity",
-    desc: "Subordinate debt and preferred equity structures to fill the capital stack gap between senior debt and sponsor equity.",
-    terms: ["2–10 year terms", "Up to 85% LTC", "Interest-only common", "Flexible structures"],
+    title: "Agency Lending",
+    scenario:
+      "You own or are acquiring multifamily. Fannie Mae, Freddie Mac, and HUD programs can deliver the most competitive long-term rates in the market.",
+    proof: "We placed a non-recourse agency loan on a 28-unit apartment 100 miles from the nearest MSA at 3.95% with 5 years of interest-only.",
+    txSlug: "perm-financing-28-unit-apartment-or",
   },
   {
     icon: Briefcase,
-    title: "Agency Lending",
-    desc: "Fannie Mae, Freddie Mac, and HUD/FHA financing programs for qualifying multifamily and senior housing properties.",
-    terms: ["5–35 year terms", "Up to 80% LTV", "Non-recourse", "30-year amortization"],
+    title: "Specialty & Creative Structures",
+    scenario:
+      "EB5 capital stacks, recourse burn-offs, bridge-to-HUD, 100% LTC \u2014 if your deal doesn\u2019t fit a box, that\u2019s where we add the most value.",
+    proof: "We structured a $7M mini-perm for an assisted living facility with a subordinate EB5 note and 50% recourse burn-off at DSCR thresholds.",
+    txSlug: "alf-mini-perm-pacific-northwest",
   },
 ];
 
@@ -69,49 +81,42 @@ const PROPERTY_TYPES = [
   { label: "Mixed-Use", slug: "mixed-use" },
 ];
 
-const CAPITAL_SOURCES = [
-  { name: "Life Insurance Companies", desc: "Long-term fixed-rate loans for stabilized assets. Competitive rates with conservative underwriting." },
-  { name: "Banks & Credit Unions", desc: "Portfolio lenders offering flexible terms, relationship pricing, and local market knowledge." },
-  { name: "CMBS Lenders", desc: "Non-recourse securitized loans for stabilized commercial properties of all types." },
-  { name: "Agency (Fannie/Freddie/HUD)", desc: "Government-sponsored programs with the most competitive rates for qualifying multifamily." },
-  { name: "Debt Funds", desc: "Bridge, mezzanine, and preferred equity from private capital providers with flexible structures." },
-  { name: "Private Capital", desc: "High-net-worth and family office capital for unique situations requiring creative solutions." },
-];
-
 export default function ServicesPage() {
   return (
     <>
       <HeroSection
-        image="/images/heroes/services-hero.jpg"
+        image="/images/heroes/contact-hero.jpg"
         title="Debt Placement Services"
-        subtitle="Comprehensive Financing Solutions"
+        subtitle="We Know Who Will Finance Your Deal"
+        imagePosition="center 70%"
       />
 
-      {/* Intro */}
+      {/* Intro — condensed */}
       <section className="bg-white py-24 px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading leading-tight">
-            Access to the Full Capital Markets
+            You don&rsquo;t need a stack of term sheets.
+            <br />
+            <em className="italic">You need the right one.</em>
           </h2>
           <p className="mt-6 text-warmgray leading-relaxed text-lg">
-            Sage Creek Group maintains active relationships with hundreds of
-            capital sources — from regional and national banks to life insurance
-            companies, CMBS lenders, agencies, debt funds, and private capital
-            providers. We leverage these relationships to secure the best
-            available terms for every engagement.
+            We maintain relationships with hundreds of capital sources — banks,
+            life companies, CMBS, agencies, debt funds, and private capital. We
+            don&rsquo;t shop your deal around. We take it directly to the
+            decision-makers most likely to close it.
           </p>
         </div>
       </section>
 
-      {/* Financing Types — enhanced cards with terms */}
+      {/* Financing Types — scenario-driven with proof */}
       <section className="bg-cream py-24 px-6">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4">
-              Financing Types
+              What We Finance
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading">
-              Tailored Capital Solutions
+              Every Scenario. One Goal: Close.
             </h2>
           </div>
 
@@ -119,7 +124,7 @@ export default function ServicesPage() {
             {FINANCING_TYPES.map((type) => (
               <div
                 key={type.title}
-                className="bg-white rounded-sm p-8 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white rounded-sm p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col"
               >
                 <type.icon
                   size={32}
@@ -130,16 +135,19 @@ export default function ServicesPage() {
                   {type.title}
                 </h3>
                 <p className="text-warmgray text-sm leading-relaxed mb-4">
-                  {type.desc}
+                  {type.scenario}
                 </p>
-                <ul className="space-y-1.5">
-                  {type.terms.map((term) => (
-                    <li key={term} className="flex items-center gap-2 text-xs text-warmgray">
-                      <span className="w-1 h-1 rounded-full bg-sage-400 flex-shrink-0" />
-                      {term}
-                    </li>
-                  ))}
-                </ul>
+                <div className="mt-auto pt-4 border-t border-warmgray/10">
+                  <p className="text-warmgray/80 text-xs leading-relaxed italic mb-3">
+                    {type.proof}
+                  </p>
+                  <Link
+                    href={`/transactions/${type.txSlug}`}
+                    className="inline-flex items-center gap-1 text-navy-500 text-xs uppercase tracking-[2px] font-medium hover:text-sage-400 transition-colors"
+                  >
+                    View Deal <ArrowRight size={12} />
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
@@ -172,36 +180,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Capital Sources */}
-      <section className="bg-cream py-24 px-6">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4">
-              Our Network
-            </p>
-            <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading">
-              Capital Sources We Access
-            </h2>
-            <p className="mt-4 text-warmgray text-lg max-w-2xl mx-auto">
-              We maintain active relationships across the full spectrum of commercial real estate capital providers.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {CAPITAL_SOURCES.map((source) => (
-              <div key={source.name} className="bg-white rounded-sm p-6 shadow-sm">
-                <h3 className="font-serif text-lg text-warmgray-heading mb-2">
-                  {source.name}
-                </h3>
-                <p className="text-warmgray text-sm leading-relaxed">
-                  {source.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="bg-navy-800 py-20 px-6">
         <div className="mx-auto max-w-3xl text-center">
@@ -209,8 +187,8 @@ export default function ServicesPage() {
             Have a deal to discuss?
           </h2>
           <p className="mt-4 text-white/60 text-lg">
-            We&rsquo;ll evaluate your project and provide a clear path to
-            financing.
+            Tell us about your project. We&rsquo;ll tell you who will finance
+            it.
           </p>
           <Link
             href="/contact"
