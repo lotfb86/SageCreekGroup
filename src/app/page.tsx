@@ -230,16 +230,9 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-navy-800/80" />
         <div className="relative z-10 mx-auto max-w-3xl text-center">
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white leading-tight">
-            You have a deal. We&rsquo;ll get it closed.
-          </h2>
-          <p className="mt-4 text-white/70 text-lg">
-            Tell us about your property and timeline. We&rsquo;ll come back
-            with options, not a pitch.
-          </p>
           <Link
             href="/contact"
-            className="mt-8 inline-flex items-center gap-2 px-8 py-3 bg-sage-400 text-white font-sans text-sm uppercase tracking-[2px] font-medium hover:bg-sage-400/90 transition-all rounded-sm"
+            className="inline-flex items-center gap-2 px-10 py-4 bg-sage-400 text-white font-sans text-sm uppercase tracking-[2px] font-medium hover:bg-sage-400/90 transition-all rounded-sm"
           >
             Submit Your Deal <ArrowRight size={16} />
           </Link>

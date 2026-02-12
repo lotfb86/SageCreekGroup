@@ -63,57 +63,6 @@ export default function WhySageCreekPage() {
         </div>
       </section>
 
-      {/* SCG's System */}
-      <section className="bg-cream py-24 px-6">
-        <div className="mx-auto max-w-5xl">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading">
-              Our Process
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                step: "01",
-                title: "Deal Analysis",
-                desc: "We start by understanding your project inside and out \u2014 the asset, the capital stack, the timeline, and the exit. We identify potential issues up front and suggest solutions so they can be resolved well before they become problems at the closing table.",
-              },
-              {
-                step: "02",
-                title: "Packaging the Deal",
-                desc: "We prepare a brief, focused report on your project to present to lenders. Lenders are busy \u2014 they don\u2019t care about glossy offering memorandums or filler. They want to see the facts. We give them exactly what they need to spark interest and move fast.",
-              },
-              {
-                step: "03",
-                title: "Sourcing the Debt",
-                desc: "We know who is likely to finance your project from the outset. We don\u2019t spray and pray \u2014 blasting your loan package to every lender on the planet and hoping something sticks. We take your deal to vetted producers we\u2019ve closed with before \u2014 people who know how to navigate their own credit teams and get deals approved. The people you work with determine whether your deal closes. That\u2019s why we only work with producers who perform.",
-              },
-              {
-                step: "04",
-                title: "Closing the Deal",
-                desc: "With the lender in place, we live with your deal until it closes. We are your advisors \u2014 helping you clear lender requirements, overcome hurdles, and keep the process moving so you close on your timeline, not theirs.",
-              },
-            ].map((step) => (
-              <div
-                key={step.step}
-                className="bg-white rounded-sm p-8 shadow-sm"
-              >
-                <span className="font-serif text-4xl text-sage-400/20">
-                  {step.step}
-                </span>
-                <h3 className="font-serif text-xl text-warmgray-heading mt-2 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-warmgray text-sm leading-relaxed">
-                  {step.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Case Study Comparison */}
       <section className="bg-white py-24 px-6">
         <div className="mx-auto max-w-5xl">
@@ -125,9 +74,9 @@ export default function WhySageCreekPage() {
               Your Bank vs. Sage Creek
             </h2>
             <p className="mt-4 text-warmgray text-lg">
-              A $10M closed transaction — what the borrower&rsquo;s
-              relationship bank offered versus what we sourced. This happens
-              all the time.
+              Multi-Tenant Retail — Seattle Metro. A $10M closed
+              transaction — what the borrower&rsquo;s relationship bank
+              offered versus what we sourced. This happens all the time.
             </p>
           </div>
 

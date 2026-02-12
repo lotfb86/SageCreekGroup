@@ -29,7 +29,12 @@
       "Bash(pnpm dev:*)",
       "Bash(curl:*)",
       "Bash(netstat:*)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(git push:*)",
+      "Bash(git checkout:*)",
+      "Bash(cmd //c \"taskkill /PID 2160 /F /T\")",
+      "Bash(cmd //c \"taskkill /PID 30816 /F /T\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nSite audit fixes: footer location, calculator links, copy refinements\n\n- Add Coeur d''Alene, Idaho to footer with nationwide service line\n- Fix tools hub banner: 10 calculators → 14\n- Add contextual service links below each calculator in the suite\n- Add Multi-Tenant Retail — Seattle Metro context to Why Sage Creek comparison\n- Simplify homepage bottom CTA to just the submit button\n- Remove duplicate process section from Why Sage Creek page\n- Fix Turbopack root path and add --webpack flag to dev script\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }

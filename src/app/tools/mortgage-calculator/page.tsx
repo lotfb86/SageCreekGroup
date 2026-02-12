@@ -66,6 +66,24 @@ const SCENARIO_ENABLED = new Set([
   "irr",
 ]);
 
+// Map calculators to relevant service context
+const CALCULATOR_SERVICE_LINKS: Record<string, { label: string; text: string }> = {
+  "loan-payment": { label: "Permanent Financing", text: "Exploring permanent debt options?" },
+  dscr: { label: "Permanent Financing", text: "Need a lender who understands your DSCR?" },
+  "max-loan": { label: "Permanent Financing", text: "Want to know your real borrowing power?" },
+  "debt-yield": { label: "Permanent Financing", text: "Debt yield driving your deal structure?" },
+  ltv: { label: "Permanent Financing", text: "Looking for higher leverage?" },
+  "cap-rate": { label: "Permanent Financing", text: "Evaluating an acquisition?" },
+  "property-value": { label: "Permanent Financing", text: "Sizing up a deal?" },
+  "cash-on-cash": { label: "Permanent Financing", text: "Optimizing your return?" },
+  irr: { label: "Permanent Financing", text: "Modeling your exit?" },
+  "blended-rate": { label: "Specialty & Creative Structures", text: "Need a creative capital stack?" },
+  waterfall: { label: "Specialty & Creative Structures", text: "Structuring a partnership?" },
+  "partner-split": { label: "Specialty & Creative Structures", text: "Splitting equity with partners?" },
+  construction: { label: "Construction Loans", text: "Planning a ground-up project?" },
+  refinance: { label: "Refinance", text: "Think you can do better than your current rate?" },
+};
+
 // Map calculator IDs to their components
 const CALCULATOR_COMPONENTS: Record<string, React.ComponentType> = {
   "loan-payment": LoanPaymentCalculator,
@@ -169,6 +187,26 @@ export default function MortgageCalculatorPage() {
                 ) : (
                   <ActiveCalc />
                 )
+              )}
+
+              {/* Contextual service link */}
+              {CALCULATOR_SERVICE_LINKS[activeCalculator] && (
+                <div className="mt-8 bg-white rounded-sm p-6 shadow-sm border-l-4 border-sage-400 flex items-center justify-between">
+                  <div>
+                    <p className="text-warmgray-heading text-sm font-medium">
+                      {CALCULATOR_SERVICE_LINKS[activeCalculator].text}
+                    </p>
+                    <p className="text-warmgray text-xs mt-1">
+                      Learn about our {CALCULATOR_SERVICE_LINKS[activeCalculator].label.toLowerCase()} services.
+                    </p>
+                  </div>
+                  <Link
+                    href="/services"
+                    className="inline-flex items-center gap-1 text-sage-400 text-xs uppercase tracking-[2px] font-medium hover:text-navy-500 transition-colors flex-shrink-0 ml-4"
+                  >
+                    View Services <ArrowRight size={14} />
+                  </Link>
+                </div>
               )}
             </div>
           </div>

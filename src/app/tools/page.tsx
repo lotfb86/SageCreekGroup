@@ -137,8 +137,8 @@ export default function ToolsPage() {
                   CRE Mortgage Calculator Suite
                 </h2>
                 <p className="text-warmgray text-sm">
-                  10 professional-grade calculators: Cap Rate, DSCR, IRR, Equity
-                  Waterfall, Blended Rate, Cash-on-Cash Return, and more.
+                  14 professional-grade calculators: Cap Rate, DSCR, IRR, Equity
+                  Waterfall, Blended Rate, Cash-on-Cash Return, Construction Interest, Refinance Savings, and more.
                 </p>
               </div>
               <ArrowRight

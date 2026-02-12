@@ -25,8 +25,11 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-2 text-sm text-white/50">
               <MapPin size={14} className="flex-shrink-0" />
-              <span>{COMPANY_LOCATION}</span>
+              <span>Coeur d&apos;Alene, Idaho</span>
             </div>
+            <p className="text-xs text-white/30 mt-1 ml-5">
+              Serving Idaho, Oregon, Washington &amp; Nationwide
+            </p>
           </div>
 
           {/* Navigation */}
