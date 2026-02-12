@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send, Phone, Mail, MapPin, Calendar, CheckCircle } from "lucide-react";
+import { Send, Phone, Mail, MapPin, CheckCircle, Loader2, AlertCircle, Shield } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
 import { CONTACT } from "@/lib/constants";
 
@@ -30,11 +30,48 @@ const LOAN_AMOUNTS = [
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // In production, this would send to an API
-    setSubmitted(true);
+    setSubmitting(true);
+    setError(null);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data = {
+      firstName: formData.get("firstName") as string,
+      lastName: formData.get("lastName") as string,
+      email: formData.get("email") as string,
+      phone: formData.get("phone") as string,
+      propertyType: formData.get("propertyType") as string,
+      loanAmount: formData.get("loanAmount") as string,
+      dealType: formData.get("dealType") as string,
+      propertyLocation: formData.get("propertyLocation") as string,
+      message: formData.get("message") as string,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to submit");
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError(
+        "There was a problem submitting your deal. Please try again or call us directly."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const inputClass =
@@ -55,9 +92,13 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
             {/* Form */}
             <div className="lg:col-span-3">
-              <h2 className="font-serif text-3xl text-warmgray-heading mb-8">
+              <h2 className="font-serif text-3xl text-warmgray-heading mb-2">
                 Tell Us About Your Deal
               </h2>
+              <p className="text-warmgray text-sm mb-8">
+                We&rsquo;ll respond within one business day with initial
+                feedback and next steps.
+              </p>
 
               {submitted ? (
                 <div className="bg-sage-400/10 border border-sage-400/30 rounded-sm p-10 text-center">
@@ -80,6 +121,14 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Error message */}
+                  {error && (
+                    <div className="bg-red-50 border border-red-200 rounded-sm p-4 flex items-start gap-3">
+                      <AlertCircle size={18} className="text-red-500 mt-0.5 flex-shrink-0" />
+                      <p className="text-red-700 text-sm">{error}</p>
+                    </div>
+                  )}
+
                   {/* Name Row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
@@ -182,12 +231,12 @@ export default function ContactPage() {
                         className={inputClass}
                       >
                         <option value="">Select financing type</option>
-                        <option value="permanent">Permanent Financing</option>
-                        <option value="construction">Construction Loan</option>
-                        <option value="bridge">Bridge Loan</option>
-                        <option value="refinance">Refinance</option>
-                        <option value="acquisition">Acquisition</option>
-                        <option value="other">Other</option>
+                        <option value="Permanent Financing">Permanent Financing</option>
+                        <option value="Construction Loan">Construction Loan</option>
+                        <option value="Bridge Loan">Bridge Loan</option>
+                        <option value="Refinance">Refinance</option>
+                        <option value="Acquisition">Acquisition</option>
+                        <option value="Other">Other</option>
                       </select>
                     </div>
                     <div>
@@ -218,12 +267,33 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <button
-                    type="submit"
-                    className="inline-flex items-center gap-2 px-8 py-3 bg-sage-400 text-white font-sans text-sm uppercase tracking-[2px] font-medium hover:bg-sage-400/90 transition-all rounded-sm"
-                  >
-                    Submit Your Deal <Send size={16} />
-                  </button>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                    <button
+                      type="submit"
+                      disabled={submitting}
+                      className="inline-flex items-center gap-2 px-8 py-3 bg-sage-400 text-white font-sans text-sm uppercase tracking-[2px] font-medium hover:bg-sage-400/90 transition-all rounded-sm disabled:opacity-60 disabled:cursor-not-allowed"
+                    >
+                      {submitting ? (
+                        <>
+                          Submitting... <Loader2 size={16} className="animate-spin" />
+                        </>
+                      ) : (
+                        <>
+                          Submit Your Deal <Send size={16} />
+                        </>
+                      )}
+                    </button>
+                  </div>
+
+                  {/* Privacy / Confidentiality */}
+                  <div className="flex items-start gap-2 pt-2">
+                    <Shield size={14} className="text-warmgray/40 mt-0.5 flex-shrink-0" />
+                    <p className="text-warmgray/60 text-xs leading-relaxed">
+                      All deal information is kept strictly confidential and
+                      will only be shared with potential lenders with your
+                      explicit permission.
+                    </p>
+                  </div>
                 </form>
               )}
             </div>
@@ -325,24 +395,6 @@ export default function ContactPage() {
                         </p>
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                {/* Calendly Placeholder */}
-                <div className="pt-6 border-t border-warmgray/10">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Calendar size={16} className="text-sage-400" />
-                    <h4 className="text-warmgray-heading font-medium text-sm">
-                      Schedule a Call
-                    </h4>
-                  </div>
-                  <p className="text-warmgray text-xs mb-3">
-                    Prefer to talk first? Book a 15-minute introductory call.
-                  </p>
-                  <div className="bg-warmgray/5 rounded-sm p-4 text-center">
-                    <p className="text-warmgray/60 text-xs italic">
-                      Calendly integration coming soon
-                    </p>
                   </div>
                 </div>
               </div>
