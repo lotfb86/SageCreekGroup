@@ -19,12 +19,25 @@ export interface PdfExportOptions {
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 export async function generateCalculatorPdf(options: PdfExportOptions) {
-  const { default: jsPDF } = await import("jspdf");
-  await import("jspdf-autotable");
+  const jsPDFModule = await import("jspdf");
+  const jsPDF = jsPDFModule.default;
+  const autoTableModule = await import("jspdf-autotable");
+  const autoTable = autoTableModule.default;
 
-  const doc: any = new jsPDF("p", "mm", "a4");
+  const doc = new jsPDF("p", "mm", "a4") as any;
   const pageWidth = doc.internal.pageSize.getWidth();
   let y = 15;
+
+  // Helper to run autoTable and get the final Y position
+  const runAutoTable = (opts: any): number => {
+    if (typeof doc.autoTable === "function") {
+      doc.autoTable(opts);
+      return doc.lastAutoTable?.finalY ?? opts.startY + 20;
+    } else {
+      autoTable(doc, opts);
+      return (doc as any).lastAutoTable?.finalY ?? opts.startY + 20;
+    }
+  };
 
   // ── Header (Navy-800 bar) ────────────────────────────────
   doc.setFillColor(61, 90, 128); // navy-800
@@ -61,7 +74,7 @@ export async function generateCalculatorPdf(options: PdfExportOptions) {
   y += 10;
 
   // ── Inputs Table ─────────────────────────────────────────
-  doc.autoTable({
+  y = runAutoTable({
     startY: y,
     head: [["Input", "Value"]],
     body: options.inputs.map((r) => [r.label, r.value]),
@@ -76,12 +89,10 @@ export async function generateCalculatorPdf(options: PdfExportOptions) {
     alternateRowStyles: { fillColor: [248, 247, 244] }, // cream
     margin: { left: 15, right: 15 },
     tableWidth: "auto",
-  });
-
-  y = doc.lastAutoTable.finalY + 8;
+  }) + 8;
 
   // ── Results Table ────────────────────────────────────────
-  doc.autoTable({
+  y = runAutoTable({
     startY: y,
     head: [["Result", "Value"]],
     body: options.results.map((r) => [r.label, r.value]),
@@ -96,9 +107,7 @@ export async function generateCalculatorPdf(options: PdfExportOptions) {
     alternateRowStyles: { fillColor: [248, 247, 244] },
     margin: { left: 15, right: 15 },
     tableWidth: "auto",
-  });
-
-  y = doc.lastAutoTable.finalY + 8;
+  }) + 8;
 
   // ── Optional Details Table ───────────────────────────────
   if (options.details && options.details.length > 0) {
@@ -110,7 +119,7 @@ export async function generateCalculatorPdf(options: PdfExportOptions) {
       y += 5;
     }
 
-    doc.autoTable({
+    y = runAutoTable({
       startY: y,
       head: [["", ""]],
       body: options.details.map((r) => [r.label, r.value]),
@@ -121,9 +130,7 @@ export async function generateCalculatorPdf(options: PdfExportOptions) {
       alternateRowStyles: { fillColor: [248, 247, 244] },
       margin: { left: 15, right: 15 },
       tableWidth: "auto",
-    });
-
-    y = doc.lastAutoTable.finalY + 8;
+    }) + 8;
   }
 
   // ── Footer ───────────────────────────────────────────────
@@ -137,7 +144,7 @@ export async function generateCalculatorPdf(options: PdfExportOptions) {
     footerY
   );
   doc.text(
-    "Sage Creek Group · sagecreekgroup.com · info@sagecreekgroup.com",
+    "Sage Creek Group LLC · sagecreekgroup.com · Tim@SageCreekGroup.com · (208) 755-4809",
     15,
     footerY + 4
   );
