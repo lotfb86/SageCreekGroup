@@ -109,8 +109,8 @@ export default function ContactPage() {
                     Deal Submitted Successfully
                   </h3>
                   <p className="text-warmgray text-sm mb-2">
-                    Thank you for submitting your deal. A member of our team will
-                    review your information and respond within one business day.
+                    Thank you for submitting your deal. A member of our team
+                    will respond to you shortly.
                   </p>
                   <p className="text-warmgray/60 text-xs">
                     Need immediate assistance? Call Tim at{" "}
