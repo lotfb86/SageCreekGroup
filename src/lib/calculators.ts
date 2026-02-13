@@ -64,12 +64,48 @@ export function calculatePropertyValueFromCapRate(
 export interface LoanTranche {
   amount: number;
   rate: number; // annual percentage, e.g. 5.5
+  points?: number; // origination points, e.g. 1.0 = 1%
 }
 
 export function calculateBlendedRate(tranches: LoanTranche[]): number {
   const totalAmount = tranches.reduce((sum, t) => sum + t.amount, 0);
   if (totalAmount === 0) return 0;
   const weightedSum = tranches.reduce((sum, t) => sum + t.amount * t.rate, 0);
+  return weightedSum / totalAmount;
+}
+
+/**
+ * Calculate the effective rate for a single tranche including points.
+ * Points are amortized over the loan term to get the true annualized cost.
+ * Formula: effectiveRate = baseRate + (points / termInYears)
+ */
+export function calculateEffectiveRateWithPoints(
+  rate: number,
+  points: number,
+  termMonths: number
+): number {
+  if (termMonths <= 0) return rate;
+  const termYears = termMonths / 12;
+  return rate + (points / termYears);
+}
+
+/**
+ * Calculate blended effective rate across all tranches, including points.
+ */
+export function calculateBlendedEffectiveRate(
+  tranches: LoanTranche[],
+  termMonths: number
+): number {
+  const totalAmount = tranches.reduce((sum, t) => sum + t.amount, 0);
+  if (totalAmount === 0 || termMonths <= 0) return 0;
+  const weightedSum = tranches.reduce((sum, t) => {
+    const effectiveRate = calculateEffectiveRateWithPoints(
+      t.rate,
+      t.points ?? 0,
+      termMonths
+    );
+    return sum + t.amount * effectiveRate;
+  }, 0);
   return weightedSum / totalAmount;
 }
 
