@@ -101,18 +101,17 @@ export default function ServicesPage() {
             <em className="italic">You need the right one.</em>
           </h2>
           <p className="mt-6 text-warmgray leading-relaxed text-lg">
-            We maintain relationships with hundreds of capital sources — banks,
-            life companies, CMBS, agencies, debt funds, and private capital. We
-            don&rsquo;t spray and pray. We take your deal to vetted producers
-            we&rsquo;ve closed with before — the ones who know how to get their
-            credit teams to say yes.
+            We maintain relationships with the capital sources that are active
+            in the Pacific Northwest: banks, life companies, CMBS, agencies,
+            debt funds, and private capital. We don&rsquo;t spray and pray. We
+            take your deal to vetted producers we&rsquo;ve closed with
+            before — the ones who know how to get their credit teams to say
+            yes.
           </p>
           <p className="mt-4 text-warmgray leading-relaxed text-lg">
-            <strong className="text-warmgray-heading">
-              Execution is what separates a term sheet from a closing.
-            </strong>{" "}
-            We deliver the best pricing available, then we stay with your deal
-            until it funds.
+            Execution is what separates a term sheet from a closing. We deliver
+            the best pricing available, then we stay with your deal until it
+            funds.
           </p>
         </div>
       </section>

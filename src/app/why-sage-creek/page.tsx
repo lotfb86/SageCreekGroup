@@ -36,30 +36,26 @@ export default function WhySageCreekPage() {
 
       {/* The Core Problem */}
       <section className="bg-white py-24 px-6">
-        <div className="mx-auto max-w-3xl">
-          <div className="text-center">
-            <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4">
-              The Problem We Solve
-            </p>
-            <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading leading-tight">
-              Are You Really Seeing the Full Market?
-            </h2>
-          </div>
-          <div className="mt-8 space-y-6 text-warmgray leading-relaxed text-lg">
-            <p>
-              Your bank gives you a term sheet. Maybe a second lender does too.
-              You compare the two, pick the better one, and move forward. But
-              can a couple of lenders really represent the vast, fragmented,
-              and constantly shifting capital markets landscape? Of course not.
-              What if the best deal for your project is with a lender
-              you&rsquo;ve never heard of?
-            </p>
-            <p>
-              That&rsquo;s the gap we fill. We don&rsquo;t replace your banking
-              relationships &mdash; we make sure you&rsquo;re not leaving money
-              on the table because you stopped looking too early.
-            </p>
-          </div>
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4">
+            The Problem We Solve
+          </p>
+          <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading leading-tight">
+            Are You Really Seeing the Full Market?
+          </h2>
+          <p className="mt-6 text-warmgray leading-relaxed text-lg">
+            Your bank gives you a term sheet. Maybe a second lender does too.
+            You compare the two, pick the better one, and move forward. But
+            can a couple of lenders really represent the vast, fragmented,
+            and constantly shifting capital markets landscape? Of course not.
+            What if the best deal for your project is with a lender
+            you&rsquo;ve never heard of?
+          </p>
+          <p className="mt-4 text-warmgray leading-relaxed text-lg">
+            That&rsquo;s the gap we fill. We don&rsquo;t replace your banking
+            relationships &mdash; we make sure you&rsquo;re not leaving money
+            on the table because you stopped looking too early.
+          </p>
         </div>
       </section>
 
@@ -71,7 +67,7 @@ export default function WhySageCreekPage() {
               Real Results
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading">
-              Your Bank vs. Sage Creek
+              Your Lender vs. Sage Creek
             </h2>
             <p className="mt-4 text-warmgray text-lg">
               Multi-Tenant Retail — Seattle Metro. A $10M closed
