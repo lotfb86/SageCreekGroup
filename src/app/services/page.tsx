@@ -69,18 +69,6 @@ const FINANCING_TYPES = [
   },
 ];
 
-const PROPERTY_TYPES = [
-  { label: "Multifamily", slug: "multifamily" },
-  { label: "Hotel & Hospitality", slug: "hotel" },
-  { label: "Senior Housing", slug: "senior-housing" },
-  { label: "Industrial", slug: "industrial" },
-  { label: "Retail", slug: "retail" },
-  { label: "Office", slug: "office" },
-  { label: "Medical Office", slug: "medical-office" },
-  { label: "Student Housing", slug: "student-housing" },
-  { label: "Land", slug: "land" },
-  { label: "Mixed-Use", slug: "mixed-use" },
-];
 
 export default function ServicesPage() {
   return (
@@ -170,36 +158,6 @@ export default function ServicesPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Property Types — clickable pills */}
-      <section className="bg-white py-24 px-6">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <p className="text-xs uppercase tracking-[3px] text-sage-400 font-sans font-medium mb-4">
-              Property Types
-            </p>
-            <h2 className="font-serif text-3xl sm:text-4xl text-warmgray-heading">
-              Experience Across All Asset Classes
-            </h2>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-3">
-            {PROPERTY_TYPES.map((pt) => (
-              <Link
-                key={pt.slug}
-                href={`/transactions?propertyType=${pt.slug}`}
-                className="group inline-flex items-center gap-1.5 px-5 py-2.5 bg-cream border border-warmgray/10 text-warmgray-heading text-sm font-medium rounded-sm hover:bg-sage-400 hover:border-sage-400 hover:text-white transition-all"
-              >
-                {pt.label}
-                <ArrowRight size={12} className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-              </Link>
-            ))}
-          </div>
-          <p className="text-center mt-6 text-warmgray/60 text-sm">
-            Click any property type to see our closed transactions.
-          </p>
         </div>
       </section>
 
