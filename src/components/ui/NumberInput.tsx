@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Tooltip from "@/components/calculators/Tooltip";
 
 interface NumberInputProps {
@@ -25,6 +26,28 @@ export default function NumberInput({
   tooltip,
   marketHint,
 }: NumberInputProps) {
+  // Track what the user sees in the field — allows empty state while typing
+  const [displayValue, setDisplayValue] = useState<string>(String(value));
+
+  // Sync display when value changes from outside (e.g., reset, slider)
+  useEffect(() => {
+    setDisplayValue(String(value));
+  }, [value]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const raw = e.target.value;
+    setDisplayValue(raw); // Show exactly what they typed (including empty)
+    const num = Number(raw);
+    onChange(raw === "" || isNaN(num) ? 0 : num); // Feed 0 to calculations if empty
+  };
+
+  const handleBlur = () => {
+    // Restore to 0 if they leave the field empty
+    if (displayValue === "" || isNaN(Number(displayValue))) {
+      setDisplayValue("0");
+    }
+  };
+
   return (
     <div>
       {label && (
@@ -43,8 +66,9 @@ export default function NumberInput({
         )}
         <input
           type="number"
-          value={value}
-          onChange={(e) => onChange(Number(e.target.value))}
+          value={displayValue}
+          onChange={handleChange}
+          onBlur={handleBlur}
           step={step || 1}
           min={min ?? 0}
           className={`w-full py-3 border border-warmgray/20 rounded-sm text-warmgray-heading focus:outline-none focus:border-sage-400 transition-colors bg-white ${prefix ? "pl-8 pr-4" : suffix ? "pl-4 pr-8" : "px-4"}`}
