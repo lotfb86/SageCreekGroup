@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Download, Loader2 } from "lucide-react";
 import type { PdfExportOptions } from "@/lib/pdf-export";
+import { trackEvent } from "@/components/GoogleAnalytics";
 
 interface PdfExportButtonProps {
   getOptions: () => PdfExportOptions;
@@ -10,6 +11,7 @@ interface PdfExportButtonProps {
 
 /**
  * PDF download button. Lazy-loads jsPDF on click (zero initial bundle impact).
+ * Fires a GA4 event on each download with calculator name and key inputs.
  */
 export default function PdfExportButton({ getOptions }: PdfExportButtonProps) {
   const [loading, setLoading] = useState(false);
@@ -17,8 +19,16 @@ export default function PdfExportButton({ getOptions }: PdfExportButtonProps) {
   const handleExport = async () => {
     setLoading(true);
     try {
+      const options = getOptions();
+
+      // Track the PDF download in Google Analytics
+      trackEvent("pdf_download", {
+        calculator: options.title,
+        inputs: options.inputs.map((i) => `${i.label}: ${i.value}`).join(" | "),
+      });
+
       const { generateCalculatorPdf } = await import("@/lib/pdf-export");
-      await generateCalculatorPdf(getOptions());
+      await generateCalculatorPdf(options);
     } catch (err) {
       console.error("PDF export failed:", err);
     } finally {

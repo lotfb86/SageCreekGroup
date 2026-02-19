@@ -5,6 +5,7 @@ import { PAGE_SEO } from "@/lib/seo";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import StickyCtaButton from "@/components/ui/StickyCtaButton";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "./globals.css";
 
 const ebGaramond = EB_Garamond({
@@ -46,6 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ebGaramond.variable} ${inter.variable}`}>
+        <GoogleAnalytics />
         <Header />
         <main>{children}</main>
         <Footer />
