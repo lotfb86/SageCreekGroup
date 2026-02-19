@@ -332,11 +332,13 @@ export function calculateConstructionInterestReserve(
   totalBudget: number,
   drawPeriodMonths: number,
   leaseUpMonths: number,
-  annualRate: number
+  annualRate: number,
+  leaseUpCashFlowOffsetPct: number = 0
 ): ConstructionInterestReserveResult {
   const monthlyRate = annualRate / 100 / 12;
   const totalMonths = drawPeriodMonths + leaseUpMonths;
   const monthlyDraw = drawPeriodMonths > 0 ? totalBudget / drawPeriodMonths : 0;
+  const offsetFraction = leaseUpCashFlowOffsetPct / 100;
   const breakdown: ConstructionDrawMonth[] = [];
   let totalReserve = 0;
   let cumulativeDrawn = 0;
@@ -348,7 +350,12 @@ export function calculateConstructionInterestReserve(
       cumulativeDrawn += monthlyDraw;
     }
     // Interest accrues on the cumulative balance
-    const interestPayment = cumulativeDrawn * monthlyRate;
+    const grossInterest = cumulativeDrawn * monthlyRate;
+    // During lease-up, property cash flow offsets a portion of interest
+    const interestPayment =
+      m > drawPeriodMonths
+        ? grossInterest * (1 - offsetFraction)
+        : grossInterest;
     totalReserve += interestPayment;
     balanceSum += cumulativeDrawn;
 

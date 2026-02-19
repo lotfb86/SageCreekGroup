@@ -16,6 +16,7 @@ export default function ConstructionLoanCalculator() {
   const [drawPeriod, setDrawPeriod] = useState(18);
   const [leaseUp, setLeaseUp] = useState(6);
   const [rate, setRate] = useState(8.0);
+  const [cashFlowOffset, setCashFlowOffset] = useState(0);
 
   const { benchmarks } = useMarketRates();
 
@@ -23,7 +24,8 @@ export default function ConstructionLoanCalculator() {
     totalBudget,
     drawPeriod,
     leaseUp,
-    rate
+    rate,
+    cashFlowOffset
   );
 
   return (
@@ -39,6 +41,7 @@ export default function ConstructionLoanCalculator() {
               { label: "Draw Period", value: `${drawPeriod} months` },
               { label: "Lease-Up Period", value: `${leaseUp} months` },
               { label: "Interest Rate", value: `${rate}%` },
+              { label: "Lease-Up Cash Flow Offset", value: `${cashFlowOffset}%` },
             ],
             results: [
               { label: "Total Interest Reserve", value: formatCurrency(result.totalReserve) },
@@ -80,6 +83,16 @@ export default function ConstructionLoanCalculator() {
             suffix="%"
             tooltip={CRE_TOOLTIPS.interestReserve}
             marketHint={`Current Prime Rate: ${benchmarks.primeRate.toFixed(2)}%`}
+          />
+          <SliderInput
+            label="Lease-Up Cash Flow Offset"
+            value={cashFlowOffset}
+            onChange={setCashFlowOffset}
+            min={0}
+            max={100}
+            step={5}
+            suffix="%"
+            tooltip="Estimated percentage of monthly interest covered by property cash flow during lease-up. 0% = no income (full reserve needed). 50% = property covers half the interest. Adjust based on pre-leasing or expected occupancy ramp."
           />
         </div>
         <div className="space-y-4">
@@ -128,7 +141,7 @@ export default function ConstructionLoanCalculator() {
                   <div key={m.month} className="flex justify-between">
                     <span className="text-warmgray">
                       Month {m.month}{" "}
-                      {m.month <= drawPeriod ? "(Draw)" : "(Lease-Up)"}
+                      {m.month <= drawPeriod ? "(Draw)" : cashFlowOffset > 0 ? `(Lease-Up, ${cashFlowOffset}% offset)` : "(Lease-Up)"}
                     </span>
                     <span className="text-warmgray-heading font-medium">
                       {formatCurrency(m.interestPayment)}
@@ -143,7 +156,7 @@ export default function ConstructionLoanCalculator() {
                     <div key={m.month} className="flex justify-between">
                       <span className="text-warmgray">
                         Month {m.month}{" "}
-                        {m.month <= drawPeriod ? "(Draw)" : "(Lease-Up)"}
+                        {m.month <= drawPeriod ? "(Draw)" : cashFlowOffset > 0 ? `(Lease-Up, ${cashFlowOffset}% offset)` : "(Lease-Up)"}
                       </span>
                       <span className="text-warmgray-heading font-medium">
                         {formatCurrency(m.interestPayment)}
