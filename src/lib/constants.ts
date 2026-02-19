@@ -14,7 +14,7 @@ export const NAV_LINKS = [
   { label: "Why Sage Creek?", href: "/why-sage-creek" },
   { label: "Transactions", href: "/transactions" },
   { label: "About", href: "/about" },
-  { label: "Tools", href: "/tools" },
+  { label: "Tools", href: "/tools/mortgage-calculator" },
 ] as const;
 
 export const CONTACT = {
