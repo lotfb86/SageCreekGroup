@@ -116,11 +116,12 @@ export default function MortgageCalculatorPage() {
             CRE Analysis Suite
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl text-white leading-tight">
-            Commercial Real Estate Calculator
+            Commercial Real Estate Calculators
           </h1>
           <p className="mt-4 text-white/60 text-lg">
-            14 professional-grade calculators with live market rates — cap rates,
-            DSCR, IRR, equity waterfalls, construction interest, and more.
+            No more guessing where your deal sizes. These are the same tools we
+            use every day. Run your numbers, stress-test the stack, and see
+            exactly where your deal shakes out.
           </p>
         </div>
       </section>
