@@ -21,4 +21,5 @@ export const CRE_TOOLTIPS: Record<string, string> = {
   primeRate: "The rate banks charge their most creditworthy borrowers. Construction loans are often priced relative to prime (e.g., Prime + 0.50%).",
   sofr: "Secured Overnight Financing Rate — The benchmark that replaced LIBOR. Bridge loans are often priced as SOFR + a spread (e.g., SOFR + 350 bps).",
   treasury: "U.S. Treasury yields — The risk-free benchmark. CRE permanent loans are typically priced as a spread over the 5-yr, 7-yr, or 10-yr Treasury.",
+  interestOnly: "Years of interest-only payments before amortization begins. During IO you pay only interest — no principal reduction. Common on bridge loans (full-term IO) and permanent loans (1–5 years IO).",
 };

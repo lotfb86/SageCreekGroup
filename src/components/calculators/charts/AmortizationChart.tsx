@@ -9,6 +9,7 @@ import {
   Tooltip,
   ResponsiveContainer,
   Legend,
+  ReferenceLine,
 } from "recharts";
 import { calculateMonthlyPayment } from "@/lib/calculators";
 
@@ -17,6 +18,7 @@ interface AmortizationChartProps {
   annualRate: number;
   amortYears: number;
   termYears: number;
+  ioYears?: number;
 }
 
 export default function AmortizationChart({
@@ -24,26 +26,38 @@ export default function AmortizationChart({
   annualRate,
   amortYears,
   termYears,
+  ioYears = 0,
 }: AmortizationChartProps) {
   const monthlyRate = annualRate / 100 / 12;
-  const monthly = calculateMonthlyPayment(loanAmount, annualRate, amortYears);
+  const amortMonthly = calculateMonthlyPayment(loanAmount, annualRate, amortYears);
 
-  // Build yearly data
+  // Build yearly data (IO-aware)
   const data: { year: number; principal: number; interest: number; balance: number }[] = [];
   let balance = loanAmount;
+  let currentMonth = 0;
+  const ioMonths = ioYears * 12;
 
-  const yearsToShow = Math.min(amortYears, 40);
+  const yearsToShow = Math.min(ioYears + amortYears, 40);
   for (let yr = 1; yr <= yearsToShow; yr++) {
     let yearPrincipal = 0;
     let yearInterest = 0;
 
     for (let m = 0; m < 12; m++) {
+      currentMonth++;
       if (balance <= 0) break;
-      const interestPmt = balance * monthlyRate;
-      const principalPmt = Math.min(monthly - interestPmt, balance);
-      yearInterest += interestPmt;
-      yearPrincipal += principalPmt;
-      balance -= principalPmt;
+
+      if (currentMonth <= ioMonths) {
+        // IO period: interest only, no principal reduction
+        const interestPmt = balance * monthlyRate;
+        yearInterest += interestPmt;
+      } else {
+        // Amortizing period
+        const interestPmt = balance * monthlyRate;
+        const principalPmt = Math.min(amortMonthly - interestPmt, balance);
+        yearInterest += interestPmt;
+        yearPrincipal += principalPmt;
+        balance -= principalPmt;
+      }
     }
 
     data.push({
@@ -114,8 +128,21 @@ export default function AmortizationChart({
               fill="#3d5a80"
               fillOpacity={0.4}
             />
+            {/* IO boundary line */}
+            {ioYears > 0 && (
+              <ReferenceLine
+                x={ioYears}
+                stroke="#f59e0b"
+                strokeDasharray="5 5"
+                label={{
+                  value: "IO Ends",
+                  position: "top",
+                  style: { fontSize: 10, fill: "#f59e0b" },
+                }}
+              />
+            )}
             {/* Term maturity line */}
-            {termYears < amortYears && (
+            {termYears < (ioYears + amortYears) && (
               <CartesianGrid
                 horizontalPoints={[]}
                 verticalPoints={[termYears]}

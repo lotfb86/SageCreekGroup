@@ -276,6 +276,48 @@ export function calculatePartnerEquitySplit(
   };
 }
 
+// Interest-Only Monthly Payment
+export function calculateInterestOnlyPayment(
+  loanAmount: number,
+  annualRate: number
+): number {
+  const monthlyRate = annualRate / 100 / 12;
+  return loanAmount * monthlyRate;
+}
+
+// Balloon Balance with Interest-Only Period
+// During IO, no principal is paid. Amortization begins after IO ends.
+export function calculateBalloonBalanceWithIO(
+  loanAmount: number,
+  annualRate: number,
+  amortizationYears: number,
+  loanTermYears: number,
+  ioYears: number
+): number {
+  const ioMonths = ioYears * 12;
+  const termMonths = loanTermYears * 12;
+  const amortizingMonthsInTerm = Math.max(0, termMonths - ioMonths);
+
+  // Entire term is IO — balloon is the full loan amount
+  if (amortizingMonthsInTerm <= 0) return loanAmount;
+
+  const monthlyRate = annualRate / 100 / 12;
+  const monthlyPayment = calculateMonthlyPayment(loanAmount, annualRate, amortizationYears);
+
+  if (monthlyRate === 0) {
+    const numAmortPayments = amortizationYears * 12;
+    return loanAmount * (1 - amortizingMonthsInTerm / numAmortPayments);
+  }
+
+  // Remaining balance after n amortizing payments
+  const balance =
+    loanAmount * Math.pow(1 + monthlyRate, amortizingMonthsInTerm) -
+    monthlyPayment *
+      ((Math.pow(1 + monthlyRate, amortizingMonthsInTerm) - 1) / monthlyRate);
+
+  return Math.max(0, balance);
+}
+
 // Loan Balance at Term End (for balloon payment calculation)
 export function calculateBalloonBalance(
   loanAmount: number,
