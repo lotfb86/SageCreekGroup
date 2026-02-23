@@ -2,7 +2,7 @@ export const PAGE_SEO = {
   home: {
     title: "Commercial Real Estate Financing | CRE Debt Placement Advisory",
     description:
-      "Sage Creek Group places $3M+ commercial real estate loans nationwide. Permanent, bridge, construction & agency financing. $300M+ closed. Submit your deal today.",
+      "Sage Creek Group specializes in structured financing within the commercial real estate sector, offering a range of financial services including permanent financing, bridge loans, and construction loans for real estate projects.",
   },
   services: {
     title:
@@ -14,7 +14,7 @@ export const PAGE_SEO = {
     title:
       "Why Use a CRE Mortgage Broker? | Better Rates, More Options, Faster Closings",
     description:
-      "See how Sage Creek Group saves borrowers $60K+/year vs. their relationship bank. Access nearly 7,000 lenders through one call.",
+      "Sage Creek Group provides independent debt placement advisory, helping borrowers access competitive financing options across a broad network of capital sources.",
   },
   transactions: {
     title:
