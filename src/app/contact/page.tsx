@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Send, Phone, Mail, MapPin, CheckCircle, Loader2, AlertCircle, Shield } from "lucide-react";
 import HeroSection from "@/components/sections/HeroSection";
 import { CONTACT } from "@/lib/constants";
@@ -32,6 +32,12 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const loadTimeRef = useRef<number>(Date.now());
+
+  // Record when the page loaded (for timing-based spam check)
+  useEffect(() => {
+    loadTimeRef.current = Date.now();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -51,6 +57,9 @@ export default function ContactPage() {
       dealType: formData.get("dealType") as string,
       propertyLocation: formData.get("propertyLocation") as string,
       message: formData.get("message") as string,
+      // Anti-spam fields
+      _hp: formData.get("_hp") as string, // honeypot
+      _t: String(loadTimeRef.current), // timestamp
     };
 
     try {
@@ -110,11 +119,15 @@ export default function ContactPage() {
                   </h3>
                   <p className="text-warmgray text-sm mb-2">
                     Thank you for submitting your deal. A member of our team
-                    will respond to you shortly.
+                    will review your information and respond within one business
+                    day.
                   </p>
                   <p className="text-warmgray/60 text-xs">
                     Need immediate assistance? Call Tim at{" "}
-                    <a href={`tel:${CONTACT.tim.phone}`} className="text-sage-400 hover:underline">
+                    <a
+                      href={`tel:${CONTACT.tim.phone}`}
+                      className="text-sage-400 hover:underline"
+                    >
                       {CONTACT.tim.phone}
                     </a>
                   </p>
@@ -128,6 +141,28 @@ export default function ContactPage() {
                       <p className="text-red-700 text-sm">{error}</p>
                     </div>
                   )}
+
+                  {/* Honeypot — invisible to humans, bots auto-fill it */}
+                  <div
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      left: "-9999px",
+                      top: "-9999px",
+                      opacity: 0,
+                      height: 0,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <label htmlFor="_hp">Website</label>
+                    <input
+                      type="text"
+                      id="_hp"
+                      name="_hp"
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </div>
 
                   {/* Name Row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -198,7 +233,9 @@ export default function ContactPage() {
                       >
                         <option value="">Select property type</option>
                         {PROPERTY_TYPES.map((pt) => (
-                          <option key={pt} value={pt}>{pt}</option>
+                          <option key={pt} value={pt}>
+                            {pt}
+                          </option>
                         ))}
                       </select>
                     </div>
@@ -214,7 +251,9 @@ export default function ContactPage() {
                       >
                         <option value="">Select range</option>
                         {LOAN_AMOUNTS.map((la) => (
-                          <option key={la} value={la}>{la}</option>
+                          <option key={la} value={la}>
+                            {la}
+                          </option>
                         ))}
                       </select>
                     </div>
