@@ -1,5 +1,92 @@
 [
   {
+    "id": 40,
+    "slug": "bridge-refinance-72-unit-mixed-use-salem-or",
+    "amount": 16950000,
+    "amountDisplay": "$16,950,000",
+    "title": "Debt Fund Bridge Refinance – 72-Unit Class A Mixed Use",
+    "subtitle": "Salem, OR",
+    "dealType": "bridge",
+    "propertyType": "mixed-use",
+    "city": "Salem",
+    "state": "OR",
+    "terms": {
+      "Loan Amount": "$16,950,000",
+      "Rate": "Term SOFR + 2.75% (~6.34% all-in)",
+      "Term": "24 Months + Three 12-Month Extensions",
+      "Structure": "Interest Only Through Month 36",
+      "LTV/LTC": "71% / 74%",
+      "Recourse": "Nonrecourse"
+    },
+    "description": "Bridge loan to refinance a newly constructed four-story mixed-use property in Oregon with 72 apartments and roughly 12,700 SF of ground floor retail. Proceeds retired a maturing construction loan and funded reserves to carry the property through lease-up. Closed in 41 days.",
+    "image": "/images/transactions/40-mixed-use-72-unit-salem-or.webp",
+    "closeDate": "September 2026",
+    "sortOrder": 1
+  },
+  {
+    "id": 41,
+    "slug": "bridge-refi-7-duplexes-granite-falls-wa",
+    "amount": 2825000,
+    "amountDisplay": "$2,825,000",
+    "title": "Bridge Refi – 7 Condo Mapped Duplexes (14 Units)",
+    "subtitle": "Granite Falls, WA",
+    "dealType": "bridge",
+    "propertyType": "single-family",
+    "city": "Granite Falls",
+    "state": "WA",
+    "terms": {
+      "Loan Amount": "$2,825,000",
+      "Rate": "Prime + 2.75%",
+      "Term": "12 Months + Two 6-Month Extensions",
+      "LTV": "71% (Bulk Sale Value)"
+    },
+    "description": "Bridge refinance for seven condo-mapped duplexes in a tertiary market. Borrower was six months past maturity with the senior lender, and the payoff had grown well past initial term sheet coverage. SCG negotiated the payoff with the servicer, sized the new loan to cover it in full with no capital call, and placed a $2,825,000 refinance with a California bridge lender. Foreclosure averted, senior lender paid off, fourteen units heading to market.",
+    "image": "/images/transactions/41-bridge-refi-duplexes-granite-falls-wa.png",
+    "closeDate": "September 2026",
+    "sortOrder": 2
+  },
+  {
+    "id": 38,
+    "slug": "acquisition-116-key-la-quinta-western-wa",
+    "amount": 9600000,
+    "amountDisplay": "$9,600,000",
+    "title": "116-Key La Quinta",
+    "subtitle": "Western Washington",
+    "dealType": "acquisition",
+    "propertyType": "hotel",
+    "city": "Western Washington",
+    "state": "WA",
+    "terms": {
+      "Terms": "Confidential"
+    },
+    "description": "Conventional bank acquisition financing for a 116-key La Quinta hotel in Western Washington. Historical cash flow wouldn't service the debt at a reasonable leverage point, so the deal required a lender willing to underwrite to pro forma income. SCG cleared the market and sourced three competing bank offers, all underwriting to pro forma cash flow, achieving a 66% loan-to-cost. Flawless execution from a gold-plated borrower and experienced operator.",
+    "image": "/images/transactions/38-la-quinta-western-wa.webp",
+    "closeDate": "April 2026",
+    "sortOrder": 3
+  },
+  {
+    "id": 39,
+    "slug": "refinance-two-9-unit-apartments-seattle-wa",
+    "amount": 2900000,
+    "amountDisplay": "$2,900,000",
+    "title": "Refinance – Two 9-Unit Apartment Projects",
+    "subtitle": "Seattle, WA",
+    "dealType": "refinance",
+    "propertyType": "multifamily",
+    "city": "Seattle",
+    "state": "WA",
+    "terms": {
+      "Loan Amount": "$2,900,000",
+      "Rate": "6.70%",
+      "Term": "10 Years",
+      "Amortization": "30 Years"
+    },
+    "description": "Two notes in special assets with the foreclosure clock ticking and a subordinate lender behind them with consent rights. SCG held off the existing senior lender, negotiated a fresh intercreditor agreement with the subordinate lender, and ran point on a new senior loan — part asset manager, part attorney, part capital advisor. A regional bank delivered a 10-year floating-rate refinance in the mid-6s with a friendly prepayment penalty. Foreclosure averted, second position lender satisfied, capital stack rebuilt.",
+    "image": "/images/transactions/39-two-9unit-apartments-seattle-wa.png",
+    "closeDate": "March 2026",
+    "sortOrder": 4
+  },
+  {
     "id": 1,
     "slug": "construction-loan-19-townhomes-caldwell-id",
     "amount": 8200000,
@@ -19,7 +106,7 @@
     "description": "Construction financing for a 19-unit residential townhome project in the Boise submarket. Proceeds refinanced a bridge loan and funded vertical construction.",
     "image": "/images/transactions/01-townhomes-caldwell-id.png",
     "featured": true,
-    "sortOrder": 1
+    "sortOrder": 5
   },
   {
     "id": 2,
@@ -42,7 +129,7 @@
     "description": "Permanent financing for a newly constructed 204-unit Class A apartment complex with an extended interest-only period.",
     "image": "/images/transactions/02-class-a-multi-western-or.png",
     "featured": true,
-    "sortOrder": 2
+    "sortOrder": 6
   },
   {
     "id": 3,
@@ -63,7 +150,7 @@
     "description": "Bridge refinance for a recently completed 144-unit Class A multifamily property during lease-up. Property was 80% occupied at closing with a $1M earn-out subject to debt yield hurdles.",
     "image": "/images/transactions/03-bridge-to-perm-144-unit-wa.png",
     "featured": true,
-    "sortOrder": 3
+    "sortOrder": 7
   },
   {
     "id": 4,
@@ -83,7 +170,7 @@
     },
     "description": "Senior bridge loan for a borrower whose business was impacted by COVID. Enabled time for revenue stabilization before bank refinancing.",
     "image": "/images/transactions/04-redmond-industrial-wa.png",
-    "sortOrder": 4
+    "sortOrder": 8
   },
   {
     "id": 5,
@@ -105,7 +192,7 @@
     },
     "description": "Acquisition financing for Thrive Flats, a recently constructed 100-unit mixed-use property with ground lease, broken condo retail, and underwriting to pro forma rents.",
     "image": "/images/transactions/05-mixed-use-kansas-city-mo.png",
-    "sortOrder": 5
+    "sortOrder": 9
   },
   {
     "id": 6,
@@ -128,7 +215,7 @@
     "description": "Refinance of Breckenridge Apartments, a 160-unit Class A property closed prior to stabilization at 85% occupancy. Lender required only 75% occupancy.",
     "image": "/images/transactions/06-breckenridge-nampa-id.png",
     "featured": true,
-    "sortOrder": 6
+    "sortOrder": 10
   },
   {
     "id": 7,
@@ -151,7 +238,7 @@
     },
     "description": "All-in-one construction/mini-perm/perm loan for Anthony's Place, a 71-unit mixed-use project with 13,000 SF ground floor retail. Fixed rate through stabilization.",
     "image": "/images/transactions/07-mixed-use-salem-or.png",
-    "sortOrder": 7
+    "sortOrder": 11
   },
   {
     "id": 8,
@@ -174,7 +261,7 @@
     },
     "description": "Cash-out refinance for a 4-property retail portfolio spread across western Oregon. Provided future CAPEX funding facilities.",
     "image": "/images/transactions/08-retail-portfolio-salem-or.png",
-    "sortOrder": 8
+    "sortOrder": 12
   },
   {
     "id": 9,
@@ -197,7 +284,7 @@
     },
     "description": "Cash-out refinance of Turnridge Corner with non-recourse execution via a national life insurance company.",
     "image": "/images/transactions/09-multi-tenant-retail-salem-or.png",
-    "sortOrder": 9
+    "sortOrder": 13
   },
   {
     "id": 10,
@@ -218,7 +305,7 @@
     },
     "description": "Two separate build-to-rent townhome construction loans (12 and 16 units) closed in 45 days during market turmoil. Fixed rate, interest-only, no minimum interest period.",
     "image": "/images/transactions/10-btr-townhomes-north-salem-or.png",
-    "sortOrder": 10
+    "sortOrder": 14
   },
   {
     "id": 11,
@@ -241,7 +328,7 @@
     "description": "Vertical construction loan for Boones Crossing, a 96-unit build-to-rent townhome project. Proceeds refinanced existing mortgage, funded construction, and included an 18-month interest reserve.",
     "image": "/images/transactions/11-btr-94-unit-woodburn-or.png",
     "featured": true,
-    "sortOrder": 11
+    "sortOrder": 15
   },
   {
     "id": 12,
@@ -263,7 +350,7 @@
     },
     "description": "High-LTC construction loan for Timberline Hills, a 61-unit for-sale single-family subdivision. Proceeds refinanced existing mortgage and funded construction plus interest reserve.",
     "image": "/images/transactions/12-subdivision-61-unit-salem-or.png",
-    "sortOrder": 12
+    "sortOrder": 16
   },
   {
     "id": 13,
@@ -285,7 +372,7 @@
     },
     "description": "100% loan-to-cost construction financing for a 31-unit for-sale single-family subdivision. Fast closing in 40 days. Lender recognized sponsor's imputed equity.",
     "image": "/images/transactions/13-subdivision-31-unit-eugene-or.png",
-    "sortOrder": 13
+    "sortOrder": 17
   },
   {
     "id": 14,
@@ -306,7 +393,7 @@
     },
     "description": "Interest-only bridge loan for 68 paper lots with no prepayment penalty. Funded interest reserve and site development. Lender ready to fund vertical starts.",
     "image": "/images/transactions/14-bridge-68-lot-eugene-or.png",
-    "sortOrder": 14
+    "sortOrder": 18
   },
   {
     "id": 15,
@@ -329,7 +416,7 @@
     "description": "All-in-one development and vertical construction loan for Bethel Park, an 83-unit for-sale single-family subdivision. Single closing approach with 30-day origination to closing.",
     "image": "/images/transactions/15-subdivision-83-unit-salem-or.png",
     "featured": true,
-    "sortOrder": 15
+    "sortOrder": 19
   },
   {
     "id": 16,
@@ -350,7 +437,7 @@
     },
     "description": "Cash-out refinance of a permitted land tract (permitted for 407 apartment units). High-leverage financing with a 30-day closing, located near Amazon distribution facility.",
     "image": "/images/transactions/16-bridge-179-unit-woodburn-or.png",
-    "sortOrder": 16
+    "sortOrder": 20
   },
   {
     "id": 17,
@@ -373,7 +460,7 @@
     },
     "description": "High-LTC construction loan for Young Street Townhomes, a 60-unit build-to-rent project. Sponsor's track record yielded best-in-class pricing. Recourse loan.",
     "image": "/images/transactions/17-btr-60-unit-woodburn-or.png",
-    "sortOrder": 17
+    "sortOrder": 21
   },
   {
     "id": 18,
@@ -395,7 +482,7 @@
     },
     "description": "Permanent financing for Samish Station, a 52-unit student housing property (two buildings: 24 and 27 units). 100% occupied at application despite COVID disruptions. Open to prepayment anytime, no debt service reserves required.",
     "image": "/images/transactions/18-student-housing-bellingham-wa.png",
-    "sortOrder": 18
+    "sortOrder": 22
   },
   {
     "id": 19,
@@ -418,7 +505,7 @@
     },
     "description": "Acquisition financing for a recently constructed 96-unit garden-style apartment. 50% occupied at application with 40-day application to closing. Included future funding facility for renovations.",
     "image": "/images/transactions/19-bridge-96-unit-salem-or.png",
-    "sortOrder": 19
+    "sortOrder": 23
   },
   {
     "id": 20,
@@ -441,7 +528,7 @@
     },
     "description": "Acquisition financing for an owner-occupied commercial office building site. Secured a 70 bps pricing discount via wholesale banking relationships. No prepayment penalty option available.",
     "image": "/images/transactions/20-dev-site-seattle-msa.png",
-    "sortOrder": 20
+    "sortOrder": 24
   },
   {
     "id": 21,
@@ -463,7 +550,7 @@
     },
     "description": "Cash-out refinance of a 20,000 SF medical office building. 80% occupied by a single credit tenant. Full leverage loan with rate adjusted downward at closing.",
     "image": "/images/transactions/21-medical-office-bellingham-wa.png",
-    "sortOrder": 21
+    "sortOrder": 25
   },
   {
     "id": 22,
@@ -487,7 +574,7 @@
     },
     "description": "Cash-out refinance of a garden-style 28-unit apartment in a tertiary Oregon market (100 miles from nearest MSA). 16 of 28 units under master lease to a hospital. Non-recourse agency loan at maximum leverage.",
     "image": "/images/transactions/22-28-unit-apartment-or.png",
-    "sortOrder": 22
+    "sortOrder": 26
   },
   {
     "id": 23,
@@ -509,7 +596,7 @@
     },
     "description": "Refinance of three used car dealerships and a warehouse. Enabled the acquisition of a Chevrolet/Nissan franchise dealership and satisfied General Motors liquidity requirements.",
     "image": "/images/transactions/23-dealership-refinance-central-wa.png",
-    "sortOrder": 23
+    "sortOrder": 27
   },
   {
     "id": 24,
@@ -531,7 +618,7 @@
     },
     "description": "Acquisition of a 1990s-vintage value-add 44-unit apartment with deferred maintenance. Rents 18% below market with a 40% expense ratio. Included future funding facility for exterior renovations.",
     "image": "/images/transactions/24-bridge-44-unit-salem-or.png",
-    "sortOrder": 24
+    "sortOrder": 28
   },
   {
     "id": 25,
@@ -554,7 +641,7 @@
     },
     "description": "Acquisition financing for a 101-key La Quinta hotel for a first-time hotel buyer. Strong historical occupancy and cash flow. Located off Interstate 5 with seller's management team retained.",
     "image": "/images/transactions/25-la-quinta-lynnwood-wa.png",
-    "sortOrder": 25
+    "sortOrder": 29
   },
   {
     "id": 26,
@@ -576,7 +663,7 @@
     },
     "description": "Ground-up construction financing for a 96-unit mid-rise multifamily in a tertiary Oregon market. High-leverage non-bank financing with proceeds not fully funded at closing (no negative arbitrage).",
     "image": "/images/transactions/26-construction-96-unit-or.png",
-    "sortOrder": 26
+    "sortOrder": 30
   },
   {
     "id": 27,
@@ -599,7 +686,7 @@
     },
     "description": "Long-term fixed rate mortgage for a 330-unit apartment community. Included $5.5M cash out with early payoff from existing loan. Enabled supplemental financing option for future rent increases.",
     "image": "/images/transactions/27-330-unit-apartment-yakima-wa.jpg",
-    "sortOrder": 27
+    "sortOrder": 31
   },
   {
     "id": 28,
@@ -619,7 +706,7 @@
     },
     "description": "Mini-perm financing for a 91-bed assisted living and memory care facility. Complex capital stack with subordinate EB5 note. Featured interest reserve with 50% recourse burn-off at DSCR thresholds.",
     "image": "/images/transactions/28-alf-mini-perm-pnw.png",
-    "sortOrder": 28
+    "sortOrder": 32
   },
   {
     "id": 29,
@@ -639,7 +726,7 @@
     },
     "description": "Permanent financing for a 165-key Best Western constructed in 1999. All proceeds refinanced existing debt. Included a large operating line of credit. Borrower was a non-US citizen.",
     "image": "/images/transactions/29-best-western-pnw.png",
-    "sortOrder": 29
+    "sortOrder": 33
   },
   {
     "id": 30,
@@ -659,7 +746,7 @@
     },
     "description": "Bridge-to-HUD financing for an 88-unit assisted living facility in a rural Pacific Northwest town. Medicaid-heavy census with low occupancy. Turn-around scenario with lender-funded CAPEX reserve and 12-month IO strip to stabilize cash flow for HUD submission.",
     "image": "/images/transactions/30-bridge-to-hud-pnw.png",
-    "sortOrder": 30
+    "sortOrder": 34
   },
   {
     "id": 31,
@@ -681,7 +768,7 @@
     },
     "description": "Permanent refinance of a Class B multi-tenant retail building. Improved rate by 80 bps versus competing term sheet and obtained par pricing.",
     "image": "/images/transactions/31-multi-tenant-retail-refinance.png",
-    "sortOrder": 31
+    "sortOrder": 35
   },
   {
     "id": 32,
@@ -701,7 +788,7 @@
     },
     "description": "Bridge loan for a 20,000 SF Class A office building. Borrower faced bank maturity refusal with 50% vacancy and lack of liquidity. No prepayment penalty or yield maintenance. Included 7-month interest reserve for leasing commissions and TI. 14-day close.",
     "image": "/images/transactions/32-senior-bridge-office.jpg",
-    "sortOrder": 32
+    "sortOrder": 36
   },
   {
     "id": 33,
@@ -723,7 +810,7 @@
     },
     "description": "1031 exchange acquisition financing for a NNN credit-tenant-leased Burger King for a California investor. Financed through a regional North Carolina credit union.",
     "image": "/images/transactions/33-single-tenant-nc.jpg",
-    "sortOrder": 33
+    "sortOrder": 37
   },
   {
     "id": 34,
@@ -744,7 +831,7 @@
     },
     "description": "Evergreen fix-and-flip line of credit for an active Pacific Northwest investor. Covers SFR, 1-4 units, condos, townhomes, multifamily up to 20 units, and new construction. After-repair value must be 75% or less.",
     "image": "/images/transactions/34-fix-flip-credit-line-pnw.png",
-    "sortOrder": 34
+    "sortOrder": 38
   },
   {
     "id": 35,
@@ -764,7 +851,7 @@
     },
     "description": "Refinance of a multi-use building with vacant second and third floors. Hard payoff on private money note with conventional refinancing unavailable due to low occupancy. Included future funding facilities for TI and CAPEX.",
     "image": "/images/transactions/35-multi-use-refinance-or.jpg",
-    "sortOrder": 35
+    "sortOrder": 39
   },
   {
     "id": 36,
@@ -784,7 +871,7 @@
     },
     "description": "Refinance of a Denny's restaurant property for a California investor unfamiliar with midwest banking. Secured competitive terms from a national bank.",
     "image": "/images/transactions/36-dennys-refinance-oh.png",
-    "sortOrder": 36
+    "sortOrder": 40
   },
   {
     "id": 37,
@@ -805,93 +892,6 @@
     },
     "description": "Regional bank financing for the acquisition of unimproved land for a future assisted living facility. Best-in-class assisted living operator and developer.",
     "image": "/images/transactions/37-land-acquisition-pnw.png",
-    "sortOrder": 37
-  },
-  {
-    "id": 38,
-    "slug": "acquisition-116-key-la-quinta-western-wa",
-    "amount": 9600000,
-    "amountDisplay": "$9,600,000",
-    "title": "116-Key La Quinta",
-    "subtitle": "Western Washington",
-    "dealType": "acquisition",
-    "propertyType": "hotel",
-    "city": "Western Washington",
-    "state": "WA",
-    "terms": {
-      "Terms": "Confidential"
-    },
-    "description": "Conventional bank acquisition financing for a 116-key La Quinta hotel in Western Washington. Historical cash flow wouldn't service the debt at a reasonable leverage point, so the deal required a lender willing to underwrite to pro forma income. SCG cleared the market and sourced three competing bank offers, all underwriting to pro forma cash flow, achieving a 66% loan-to-cost. Flawless execution from a gold-plated borrower and experienced operator.",
-    "image": "/images/transactions/38-la-quinta-western-wa.webp",
-    "closeDate": "April 2026",
-    "sortOrder": 38
-  },
-  {
-    "id": 39,
-    "slug": "refinance-two-9-unit-apartments-seattle-wa",
-    "amount": 2900000,
-    "amountDisplay": "$2,900,000",
-    "title": "Refinance – Two 9-Unit Apartment Projects",
-    "subtitle": "Seattle, WA",
-    "dealType": "refinance",
-    "propertyType": "multifamily",
-    "city": "Seattle",
-    "state": "WA",
-    "terms": {
-      "Loan Amount": "$2,900,000",
-      "Rate": "6.70%",
-      "Term": "10 Years",
-      "Amortization": "30 Years"
-    },
-    "description": "Two notes in special assets with the foreclosure clock ticking and a subordinate lender behind them with consent rights. SCG held off the existing senior lender, negotiated a fresh intercreditor agreement with the subordinate lender, and ran point on a new senior loan — part asset manager, part attorney, part capital advisor. A regional bank delivered a 10-year floating-rate refinance in the mid-6s with a friendly prepayment penalty. Foreclosure averted, second position lender satisfied, capital stack rebuilt.",
-    "image": "/images/transactions/39-two-9unit-apartments-seattle-wa.png",
-    "closeDate": "March 2026",
-    "sortOrder": 39
-  },
-  {
-    "id": 40,
-    "slug": "bridge-refinance-72-unit-mixed-use-salem-or",
-    "amount": 16950000,
-    "amountDisplay": "$16,950,000",
-    "title": "Debt Fund Bridge Refinance – 72-Unit Class A Mixed Use",
-    "subtitle": "Salem, OR",
-    "dealType": "bridge",
-    "propertyType": "mixed-use",
-    "city": "Salem",
-    "state": "OR",
-    "terms": {
-      "Loan Amount": "$16,950,000",
-      "Rate": "Term SOFR + 2.75% (~6.34% all-in)",
-      "Term": "24 Months + Three 12-Month Extensions",
-      "Structure": "Interest Only Through Month 36",
-      "LTV/LTC": "71% / 74%",
-      "Recourse": "Nonrecourse"
-    },
-    "description": "Bridge loan to refinance a newly constructed four-story mixed-use property in Oregon with 72 apartments and roughly 12,700 SF of ground floor retail. Proceeds retired a maturing construction loan and funded reserves to carry the property through lease-up. Closed in 41 days.",
-    "image": "/images/transactions/40-mixed-use-72-unit-salem-or.webp",
-    "closeDate": "September 2026",
-    "sortOrder": 40
-  },
-  {
-    "id": 41,
-    "slug": "bridge-refi-7-duplexes-granite-falls-wa",
-    "amount": 2825000,
-    "amountDisplay": "$2,825,000",
-    "title": "Bridge Refi – 7 Condo Mapped Duplexes (14 Units)",
-    "subtitle": "Granite Falls, WA",
-    "dealType": "bridge",
-    "propertyType": "single-family",
-    "city": "Granite Falls",
-    "state": "WA",
-    "terms": {
-      "Loan Amount": "$2,825,000",
-      "Rate": "Prime + 2.75%",
-      "Term": "12 Months + Two 6-Month Extensions",
-      "LTV": "71% (Bulk Sale Value)"
-    },
-    "description": "Bridge refinance for seven condo-mapped duplexes in a tertiary market. Borrower was six months past maturity with the senior lender, and the payoff had grown well past initial term sheet coverage. SCG negotiated the payoff with the servicer, sized the new loan to cover it in full with no capital call, and placed a $2,825,000 refinance with a California bridge lender. Foreclosure averted, senior lender paid off, fourteen units heading to market.",
-    "image": "/images/transactions/41-bridge-refi-duplexes-granite-falls-wa.png",
-    "closeDate": "September 2026",
     "sortOrder": 41
   }
 ]
