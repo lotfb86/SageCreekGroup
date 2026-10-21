@@ -806,5 +806,92 @@
     "description": "Regional bank financing for the acquisition of unimproved land for a future assisted living facility. Best-in-class assisted living operator and developer.",
     "image": "/images/transactions/37-land-acquisition-pnw.png",
     "sortOrder": 37
+  },
+  {
+    "id": 38,
+    "slug": "acquisition-116-key-la-quinta-western-wa",
+    "amount": 9600000,
+    "amountDisplay": "$9,600,000",
+    "title": "116-Key La Quinta",
+    "subtitle": "Western Washington",
+    "dealType": "acquisition",
+    "propertyType": "hotel",
+    "city": "Western Washington",
+    "state": "WA",
+    "terms": {
+      "Terms": "Confidential"
+    },
+    "description": "Conventional bank acquisition financing for a 116-key La Quinta hotel in Western Washington. Historical cash flow wouldn't service the debt at a reasonable leverage point, so the deal required a lender willing to underwrite to pro forma income. SCG cleared the market and sourced three competing bank offers, all underwriting to pro forma cash flow, achieving a 66% loan-to-cost. Flawless execution from a gold-plated borrower and experienced operator.",
+    "image": "/images/transactions/38-la-quinta-western-wa.webp",
+    "closeDate": "April 2026",
+    "sortOrder": 38
+  },
+  {
+    "id": 39,
+    "slug": "refinance-two-9-unit-apartments-seattle-wa",
+    "amount": 2900000,
+    "amountDisplay": "$2,900,000",
+    "title": "Refinance – Two 9-Unit Apartment Projects",
+    "subtitle": "Seattle, WA",
+    "dealType": "refinance",
+    "propertyType": "multifamily",
+    "city": "Seattle",
+    "state": "WA",
+    "terms": {
+      "Loan Amount": "$2,900,000",
+      "Rate": "6.70%",
+      "Term": "10 Years",
+      "Amortization": "30 Years"
+    },
+    "description": "Two notes in special assets with the foreclosure clock ticking and a subordinate lender behind them with consent rights. SCG held off the existing senior lender, negotiated a fresh intercreditor agreement with the subordinate lender, and ran point on a new senior loan — part asset manager, part attorney, part capital advisor. A regional bank delivered a 10-year floating-rate refinance in the mid-6s with a friendly prepayment penalty. Foreclosure averted, second position lender satisfied, capital stack rebuilt.",
+    "image": "/images/transactions/39-two-9unit-apartments-seattle-wa.png",
+    "closeDate": "March 2026",
+    "sortOrder": 39
+  },
+  {
+    "id": 40,
+    "slug": "bridge-refinance-72-unit-mixed-use-salem-or",
+    "amount": 16950000,
+    "amountDisplay": "$16,950,000",
+    "title": "Debt Fund Bridge Refinance – 72-Unit Class A Mixed Use",
+    "subtitle": "Salem, OR",
+    "dealType": "bridge",
+    "propertyType": "mixed-use",
+    "city": "Salem",
+    "state": "OR",
+    "terms": {
+      "Loan Amount": "$16,950,000",
+      "Rate": "Term SOFR + 2.75% (~6.34% all-in)",
+      "Term": "24 Months + Three 12-Month Extensions",
+      "Structure": "Interest Only Through Month 36",
+      "LTV/LTC": "71% / 74%",
+      "Recourse": "Nonrecourse"
+    },
+    "description": "Bridge loan to refinance a newly constructed four-story mixed-use property in Oregon with 72 apartments and roughly 12,700 SF of ground floor retail. Proceeds retired a maturing construction loan and funded reserves to carry the property through lease-up. Closed in 41 days.",
+    "image": "/images/transactions/40-mixed-use-72-unit-salem-or.webp",
+    "closeDate": "September 2026",
+    "sortOrder": 40
+  },
+  {
+    "id": 41,
+    "slug": "bridge-refi-7-duplexes-granite-falls-wa",
+    "amount": 2825000,
+    "amountDisplay": "$2,825,000",
+    "title": "Bridge Refi – 7 Condo Mapped Duplexes (14 Units)",
+    "subtitle": "Granite Falls, WA",
+    "dealType": "bridge",
+    "propertyType": "single-family",
+    "city": "Granite Falls",
+    "state": "WA",
+    "terms": {
+      "Loan Amount": "$2,825,000",
+      "Rate": "Prime + 2.75%",
+      "Term": "12 Months + Two 6-Month Extensions",
+      "LTV": "71% (Bulk Sale Value)"
+    },
+    "description": "Bridge refinance for seven condo-mapped duplexes in a tertiary market. Borrower was six months past maturity with the senior lender, and the payoff had grown well past initial term sheet coverage. SCG negotiated the payoff with the servicer, sized the new loan to cover it in full with no capital call, and placed a $2,825,000 refinance with a California bridge lender. Foreclosure averted, senior lender paid off, fourteen units heading to market.",
+    "image": "/images/transactions/41-bridge-refi-duplexes-granite-falls-wa.png",
+    "closeDate": "September 2026",
+    "sortOrder": 41
   }
 ]
