@@ -40,6 +40,11 @@ export default function TransactionCard({ tx }: { tx: Transaction }) {
             {[tx.city, tx.state].filter(Boolean).join(", ")}
           </p>
         )}
+        {tx.closeDate && (
+          <p className="text-warmgray/50 text-xs mt-1">
+            Closed {tx.closeDate}
+          </p>
+        )}
         {termEntries.length > 0 && (
           <div className="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-warmgray/10">
             {termEntries.map(([key, value]) => (

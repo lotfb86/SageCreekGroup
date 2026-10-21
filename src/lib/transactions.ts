@@ -15,6 +15,7 @@ export interface Transaction {
   description: string;
   image?: string;
   featured?: boolean;
+  closeDate?: string;
   sortOrder: number;
 }
 

@@ -89,6 +89,11 @@ export default async function TransactionDetailPage({
                   {[tx.city, tx.state].filter(Boolean).join(", ")}
                 </p>
               )}
+              {tx.closeDate && (
+                <p className="text-warmgray/50 text-sm mt-1">
+                  Closed {tx.closeDate}
+                </p>
+              )}
 
               <div className="mt-8">
                 <p className="text-warmgray leading-relaxed">
